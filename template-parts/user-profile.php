@@ -5,12 +5,8 @@ get_header();
 $username = wp_get_current_user()->user_firstname;
 $current_user = wp_get_current_user();
 $status = get_field("status", "user_" . $current_user->ID);
-$proposta = have_rows("proposta");
-$orcamento = have_rows("orcamento");
-$fase1 = have_rows("fase_1");
-$final_files = have_rows("final_files");
 
-print_r($status)
+
 
 ?>
 
@@ -90,78 +86,147 @@ print_r($status)
             <div class="proposta__container container" id="proposta">
                 <h1 class="container__header proposta__header">Aqui pode consultar a proposta para o seu projecto.</h1>
                 <div class="files__grid">
-                    <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Design.pdf</p>
-                    </div>
-                    <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Video.pdf</p>
-                    </div>
-                    <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">WebDesign.pdf</p>
-                    </div>
+                    <?php 
+                        $rows = get_field("proposta", "user_" . $current_user->ID);
+                        if($rows): 
+                            foreach ($rows as $row) {
+                                ?>
+                                    <a href="<?php echo $row["file"] ?>" class="file__container" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
+                                        <p class="file__description"><?php echo $row["type"] ?></p>
+                                    </a>
+                                <?php 
+                            }
+                        else :
+                            ?>
+                                <h1>Ainda não há propostas disponiveis.</h1>
+                            <?php
+                        endif; 
+                    ?>
                 </div>
             </div>
 
             <div class="orcamento__container container" id="orcamento">
                 <h1 class="container__header orcamento__header">Aqui pode consultar o orçamento do seu projecto.</h1>
-                <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Orçamento.pdf</p>
+                
+                <div class="files__grid">
+                    <?php 
+                        $rows = get_field("orcamento", "user_" . $current_user->ID);
+                        if($rows): 
+                            foreach ($rows as $row) {
+                                ?>
+                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
+                                        <p class="file__description"><?php echo $row["nome_do_orcamento"] ?></p>
+                                    </a>
+                                <?php 
+                            }
+                        else :
+                            ?>
+                                <h1>Ainda não há orçamentos disponiveis.</h1>
+                            <?php
+                        endif; 
+                    ?>
                 </div>
+
             </div>
 
             <div class="fase1__container" id="fase1">
                 <h1 class="container__header fase__header">Aqui pode consultar a Fase 1 do seu Projecto.</h1>
-                <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Fase1.pdf</p>
+                
+                <div class="files__grid">
+                    <?php 
+                        $rows = get_field("fase_1", "user_" . $current_user->ID);
+                        if($rows): 
+                            foreach ($rows as $row) {
+                                ?>
+                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
+                                        <p class="file__description"><?php echo $row["name"] ?></p>
+                                    </a>
+                                <?php 
+                            }
+                        else :
+                            ?>
+                                <h1>Ainda não há elementos disponiveis.</h1>
+                            <?php
+                        endif; 
+                    ?>
                 </div>
+
             </div>
             <div class="fase2__container" id="fase2">
+
                 <h1 class="container__header fase__header">Aqui pode consultar a Fase 2 do seu Projecto.</h1>
-                <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Fase2.pdf</p>
+                
+                <div class="files__grid">
+                    <?php 
+                        $rows = get_field("fase_1", "user_" . $current_user->ID);
+                        if($rows): 
+                            foreach ($rows as $row) {
+                                ?>
+                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
+                                        <p class="file__description"><?php echo $row["name"] ?></p>
+                                    </a>
+                                <?php 
+                            }
+                        else :
+                            ?>
+                                <h1>Ainda não há elementos disponiveis.</h1>
+                            <?php
+                        endif; 
+                    ?>
                 </div>
+            
             </div>
             <div class="fase3__container" id="fase3">
                 <h1 class="container__header fase__header">Aqui pode consultar a Fase 3 do seu Projecto.</h1>
-                <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Fase3.pdf</p>
+                
+                <div class="files__grid">
+                    <?php 
+                        $rows = get_field("fase_1", "user_" . $current_user->ID);
+                        if($rows): 
+                            foreach ($rows as $row) {
+                                ?>
+                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
+                                        <p class="file__description"><?php echo $row["name"] ?></p>
+                                    </a>
+                                <?php 
+                            }
+                        else :
+                            ?>
+                                <h1>Ainda não há elementos disponiveis.</h1>
+                            <?php
+                        endif; 
+                    ?>
                 </div>
+
             </div>
 
             <div class="final__container" id="final">
                 <h1 class="container__header final__header">Aqui pode consultar os ficheiros finais do seu projecto</h1>
                 <div class="files__grid final__files">
-                    <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">CartaoDeVisita.pdf</p>
-                    </div>
-                    <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Item1.pdf</p>
-                    </div>
-                    <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Item2.pdf</p>
-                    </div>
-                    <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Video.mov</p>
-                    </div>
-                    <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Website</p>
-                    </div>
-                    <div class="file__container">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                        <p class="file__description">Logotipo.ai</p>
-                    </div>
+            
+                    <?php 
+                        $rows = get_field("final_files", "user_" . $current_user->ID);
+                        if($rows): 
+                            foreach ($rows as $row) {
+                                ?>
+                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
+                                        <p class="file__description"><?php echo $row["nome_do_ficheiro"] ?></p>
+                                    </a>
+                                <?php 
+                            }
+                        else :
+                            ?>
+                                <h1>Ainda não há ficheiros finais disponiveis.</h1>
+                            <?php
+                        endif; 
+                    ?>
+
                 </div>
             </div>
 
