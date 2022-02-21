@@ -8,6 +8,7 @@
 
 
 <div class="form__container">
+    <h1 class="login__header">Área de cliente</h1>
     <?php
     if ( ! is_user_logged_in() ) { // Display WordPress login form:
         $args = array(
