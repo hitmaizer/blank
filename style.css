@@ -1177,3 +1177,17 @@ textarea {
 	display: flex;
 	flex-direction: column;
 }
+
+.site-branding {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	padding: 64px;
+}
+
+.nav-menu {
+	gap: 16px;
+    place-content: flex-end;
+}
