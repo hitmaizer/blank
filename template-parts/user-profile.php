@@ -15,39 +15,41 @@ $status = get_field("status", "user_" . $current_user->ID);
     <div class="page__wrapper flex-row">
         <div class="page__sidebar flex-col">
             <ul class="sidebar__menu flex-col">
-                <div class="list__item flex-row" id="status_toggle" onclick="statusHandler()">
-                    <li>Estado</li>
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow.png" alt="" class="item__icon">
+                <h1 class="welcome__header">Olá, <?php echo $username ?></h1>
+                <div class="sidebar__top">
+                    <div class="list__item flex-row" id="status_toggle" onclick="statusHandler()">
+                        <li>Processo</li>
+                    </div>
+                    <div class="list__item flex-row" id="proposta_toggle" onclick="propostaHandler()">
+                        <li>Investimento</li>
+                    </div>
+                    <div class="list__item flex-row" id="orcamento_toggle" onclick="orcamentoHandler()">
+                        <li>Proposta</li>
+                    </div>
+                    <div class="list__item flex-row" id="fase1_toggle" onclick="fase1Handler()">
+                        <li>Ficheiros</li>
+                    </div>
+                    <div class="list__item flex-row" id="fase2_toggle" onclick="fase2Handler()">
+                        <li>Documentos</li>
+                    </div>
+                    <div class="list__item flex-row" id="fase3_toggle" onclick="fase3Handler()">
+                        <li>Financeiro</li>
+                    </div>
                 </div>
-                <div class="list__item flex-row" id="proposta_toggle" onclick="propostaHandler()">
-                    <li>Proposta</li>
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow.png" alt="" class="item__icon">
-                </div>
-                <div class="list__item flex-row" id="orcamento_toggle" onclick="orcamentoHandler()">
-                    <li>Orçamento</li>
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow.png" alt="" class="item__icon">
-                </div>
-                <div class="list__item flex-row" id="fase1_toggle" onclick="fase1Handler()">
-                    <li>Fase 1</li>
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow.png" alt="" class="item__icon">
-                </div>
-                <div class="list__item flex-row" id="fase2_toggle" onclick="fase2Handler()">
-                    <li>Fase 2</li>
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow.png" alt="" class="item__icon">
-                </div>
-                <div class="list__item flex-row" id="fase3_toggle" onclick="fase3Handler()">
-                    <li>Fase 3</li>
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow.png" alt="" class="item__icon">
-                </div>
-                <div class="list__item flex-row" id="final_toggle" onclick="finalHandler()">
-                    <li>Ficheiros Finais</li>
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow.png" alt="" class="item__icon">
+
+                <div class="sidebar__bottom">
+                    <div class="list__item flex-row" id="final_toggle" onclick="finalHandler()">
+                        <li>Os meus dados</li>
+                    </div>
+                    <div class="list__item flex-row" id="final_toggle" onclick="finalHandler()">
+                        <li>Descarregar todos os ficheiros</li>
+                    </div>
                 </div>
             </ul>
         </div>
         <div class="page__content flex-col">
 
-            <h1 class="welcome__header">Bem-vindo <?php echo $username ?>.</h1>
+            
 
             <div class="status__container container" id="status">
                 <h1 class="container__header status__header">O seu projecto encontra-se na <span class="strong__txt"><?php echo $status["label"]?></span>.</h1>
