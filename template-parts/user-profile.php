@@ -16,7 +16,7 @@ $status = get_field("status", "user_" . $current_user->ID);
         <div class="page__sidebar flex-col">
             <ul class="sidebar__menu flex-col">
                 <h1 class="welcome__header">Olá, <?php echo $username ?></h1>
-                <div class="sidebar__top">
+                <div class="sidebar__top flex-col">
                     <div class="list__item flex-row" id="status_toggle" onclick="statusHandler()">
                         <li>Processo</li>
                     </div>
