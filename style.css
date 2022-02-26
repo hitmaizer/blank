@@ -976,6 +976,11 @@ textarea {
     font-family: 'Montserrat', sans-serif;
 }
 
+a { 
+	color: inherit;
+	text-decoration: none;
+} 
+
 .page__wrapper {
 	padding: 64px;
     background-color: #DFC693;
@@ -1063,7 +1068,7 @@ textarea {
 .page__content {
     background-color: #E0C794;
     width: 100%;
-    align-items: center;
+    margin-left: 40px;
     
 }
 
@@ -1151,9 +1156,14 @@ textarea {
 	margin-top: 24px;
 }
 
-.proposta__header {
-    max-width: 630px;
-    margin-top: 64px;
+.file__description {
+	margin-top: 16px;
+	font-weight: 800;
+	font-size: 26px;
+	line-height: 130.9%;
+	letter-spacing: -0.025em;
+	color: #262626;
+	margin-top: 56px;
 }
 
 .file__container {
@@ -1173,9 +1183,6 @@ textarea {
     justify-content: center;
 }
 
-.file__description {
-    margin-top: 16px;
-}
 
 .container__header {
     font-weight: 800;
