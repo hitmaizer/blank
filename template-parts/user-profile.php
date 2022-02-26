@@ -117,26 +117,20 @@ $status = get_field("status", "user_" . $current_user->ID);
             </div>
 
             <div class="proposta__container container" id="proposta">
-                <h1 class="container__header proposta__header">Aqui pode consultar a proposta para o seu projecto.</h1>
-                <div class="files__grid">
-                    <?php 
-                        $rows = get_field("proposta", "user_" . $current_user->ID);
-                        if($rows): 
-                            foreach ($rows as $row) {
-                                ?>
-                                    <a href="<?php echo $row["file"] ?>" class="file__container" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                                        <p class="file__description"><?php echo $row["type"] ?></p>
-                                    </a>
-                                <?php 
-                            }
+                <h1 class="container__header">Investimento</h1>
+                
+                <?php 
+                    $link = get_field('proposta', "user_" . $current_user->ID);
+                    if($link): ?>
+                        <a class="button" href="<?php echo esc_url( $link ); ?>" target="_blank">
+                            <p class="file__description">Proposta e investimento</p> 
+                        </a>
+                            
+                        <?php                             
                         else :
                             ?>
-                                <h1>Ainda não há propostas disponiveis.</h1>
-                            <?php
-                        endif; 
-                    ?>
-                </div>
+                                <h1 class="griditem__title">Ainda não tem a proposta disponivel.</h1>
+                    <?php endif; ?>
             </div>
 
             <div class="orcamento__container container" id="orcamento">
