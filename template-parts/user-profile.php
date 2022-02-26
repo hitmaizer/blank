@@ -18,7 +18,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                 <h1 class="welcome__header">Olá, <?php echo $username ?></h1>
                 <div class="sidebar__top flex-col">
                     <div class="list__item flex-row" id="status_toggle" onclick="statusHandler()">
-                        <li>Processo</li>
+                        <li class="selected">Processo</li>
                     </div>
                     <div class="list__item flex-row" id="proposta_toggle" onclick="propostaHandler()">
                         <li>Investimento</li>
@@ -51,38 +51,69 @@ $status = get_field("status", "user_" . $current_user->ID);
 
             
 
-            <div class="status__container container" id="status">
-                <h1 class="container__header status__header">O seu projecto encontra-se na <span class="strong__txt"><?php echo $status["label"]?></span>.</h1>
-                <?php 
-                    switch($status["value"]) {
-                        case "proposta": 
-                            ?>
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/status1.png" alt="" class="status__img">
-                        <?php
-                        break;
-                        case "orcamento": 
-                            ?>
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/status2.png" alt="" class="status__img">
-                        <?php
-                        break;
-                        case "fase1": 
-                            ?>
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/status3.png" alt="" class="status__img">
-                        <?php
-                        break;
-                        case "finalfiles": 
-                            ?>
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/status.png" alt="" class="status__img">
-                        <?php
-                        break;
-                        default : 
-                            ?>
-                        <h1>O seu projecto ainda vai ser iniciado.</h1>
-                        <?php
-                        break;
+            <div class="status__container container show" id="status">
+                <h1 class="container__header status__header">Processo</h1>
+                <div class="process__grid">
+                    <div class="grid__topimg">
+                        <?php 
+                            switch($status["value"]) {
+                                case "proposta": 
+                                    ?>
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/status1.png" alt="" class="status__img">
+                                <?php
+                                break;
+                                case "orcamento": 
+                                    ?>
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/status2.png" alt="" class="status__img">
+                                <?php
+                                break;
+                                case "fase1": 
+                                    ?>
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/status3.png" alt="" class="status__img">
+                                <?php
+                                break;
+                                case "finalfiles": 
+                                    ?>
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                <?php
+                                break;
+                                default : 
+                                    ?>
+                                <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                <?php
+                                break;
+                            }
+                        ?>
+                    </div>
+                    <div class="grid__bottom">
+                        <div class="bottom__item">
+                            <h3 class="griditem__title">I - Diagnóstico</h3>
+                            <h6 class="griditem__subtitle">A escolha dos condimentos!</h6>
+                            <p class="griditem__text">Nesta fase mergulhamos no seu 
+                                universo para compreender objetivos e 
+                                o posicionamento que iremos trabalhar 
+                                no desenvolvimento do objeto.</p>
+                        </div>
+                        <div class="bottom__item">
+                            <h3 class="griditem__title">II - Criação</h3>
+                            <h6 class="griditem__subtitle">É o momento da emulsão!</h6>
+                            <p class="griditem__text">Vamos definir e estruturar o mais 
+                                importante. São apresentadas as
+                                referências recolhidas e qual o caminho 
+                                a explorar.
+                                Dá-se início ao processo criativo para 
+                                desenvolver o objeto.</p>
+                        </div>
+                        <div class="bottom__item">
+                            <h3 class="griditem__title">III - Execução</h3>
+                            <h6 class="griditem__subtitle">Condimentamos o seu projeto!</h6>
+                            <p class="griditem__text">Para finalizar a receita, é apresentada a 
+                                solução, o caminho e o processo
+                                criativo desenvolvido.</p>
+                        </div>
+                    </div>
 
-                    }
-                ?>
+                </div>
             </div>
 
             <div class="proposta__container container" id="proposta">
