@@ -37,7 +37,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                     </div>
                 </div>
 
-                <div class="sidebar__bottom">
+                <div class="sidebar__bottom flex-col">
                     <div class="list__item flex-row" id="final_toggle" onclick="finalHandler()">
                         <li>Os meus dados</li>
                     </div>
