@@ -18,8 +18,10 @@ $status = get_field("status", "user_" . $current_user->ID);
         </div>
         <div class="content__wrapper">
             <h1 class="projects__title">Bem-vindo, esta é a sua área. Escolha e aceda a todo o conteudo do projeto</h1>
-            <p class="placeholder__project">Titulo do projeto 1</p>
-            <p class="placeholder__project">Titulo do projeto 2</p>
+            <div class="projects__wrapper flex-col">                
+                <p class="placeholder__project">Titulo do projeto 1</p>
+                <p class="placeholder__project">Titulo do projeto 2</p>
+            </div>
         </div>
     </div>
 
