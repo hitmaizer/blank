@@ -21,7 +21,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                         <li  id="processo_btn" class="selected">Processo</li>
                     </div>
                     <div class="list__item flex-row" id="proposta_toggle" onclick="propostaHandler()">
-                        <li  id="investimento_btn" onclick="toggleSelected('investimento_btn')">Investimento</li>
+                        <li  id="investimento_btn">Investimento</li>
                     </div>
                     <div class="list__item flex-row" id="orcamento_toggle" onclick="orcamentoHandler()">
                         <li id="proposta_btn">Proposta</li>
@@ -120,7 +120,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                 <h1 class="container__header">Investimento</h1>
                 
                 <?php 
-                    $link = get_field('proposta', "user_" . $current_user->ID);
+                    $link = get_field('investimento', "user_" . $current_user->ID);
                     if($link): ?>
                         <a class="button" href="<?php echo esc_url( $link ); ?>" target="_blank">
                             <p class="file__description">Proposta e investimento</p> 
@@ -134,7 +134,7 @@ $status = get_field("status", "user_" . $current_user->ID);
             </div>
 
             <div class="orcamento__container container" id="orcamento">
-                <h1 class="container__header orcamento__header">Aqui pode consultar o orçamento do seu projecto.</h1>
+                <h1 class="container__header">Proposta</h1>
                 
                 <div class="files__grid">
                     <?php 
