@@ -1107,12 +1107,22 @@ textarea {
     margin-top: 32px;
 }
 
+
+
 .show {
     display: block;
 }
 
+
+
 .bottom__item {
-	max-width: 250px;
+	max-width: 255px;
+}
+
+.grid__bottom {
+	margin-top: 32px;
+	gap: 38px;
+	
 }
 
 .griditem__title {
@@ -1120,6 +1130,25 @@ textarea {
 	font-size: 25px;
 	line-height: 130.9%;
 	color: #262626;
+	
+}
+
+.griditem__subtitle {
+	font-weight: 800;
+	font-size: 15px;
+	line-height: 130.9%;
+	letter-spacing: -0.01em;
+	color: #262626;
+	margin-top: 24px;
+}
+
+.griditem__text {
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 130.9%;
+	letter-spacing: -0.025em;
+	color: #45443b;
+	margin-top: 24px;
 }
 
 .proposta__header {
