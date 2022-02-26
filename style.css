@@ -976,6 +976,12 @@ textarea {
     font-family: 'Montserrat', sans-serif;
 }
 
+.page__wrapper {
+	padding: 64px;
+    background-color: #DFC693;
+	min-height: 100vh;
+}
+
 .flex-col {
     display: flex;
     flex-direction: column;
@@ -987,10 +993,9 @@ textarea {
 } 
 
 .page__sidebar {
-    min-height: 100vh;
     background-color: #262626;
 	padding: 32px;
-    justify-content: center;
+    
 }
 
 .sidebar__menu {
@@ -1056,11 +1061,10 @@ textarea {
 
 
 .page__content {
-    min-height: 100vh;
     background-color: #E0C794;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    
 }
 
 .welcome__header {
@@ -1071,6 +1075,7 @@ textarea {
     place-self: flex-start;
     margin: 0 auto;
     width: 700px;
+	margin-top: 16px;
     
 }
 
@@ -1079,6 +1084,10 @@ textarea {
 .fase2__container, .fase3__container,
 .final__container {
     display: none;
+}
+
+.list__item li.selected {
+	color: white;
 }
 
 
@@ -1100,6 +1109,17 @@ textarea {
 
 .show {
     display: block;
+}
+
+.bottom__item {
+	max-width: 250px;
+}
+
+.griditem__title {
+	font-weight: 800;
+	font-size: 25px;
+	line-height: 130.9%;
+	color: #262626;
 }
 
 .proposta__header {
@@ -1129,10 +1149,11 @@ textarea {
 }
 
 .container__header {
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 44px;
+    font-weight: 800;
+	font-size: 74px;
+	line-height: 130.9%;
     color: #262626;
+	margin: 0;
     
 }
 
