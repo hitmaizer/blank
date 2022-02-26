@@ -72,7 +72,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                                 <img src="<?php echo get_template_directory_uri() ?>/assets/images/status3.png" alt="" class="status__img">
                                 <?php
                                 break;
-                                case "finalfiles": 
+                                case "final": 
                                     ?>
                                 <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
                                 <?php
@@ -135,25 +135,22 @@ $status = get_field("status", "user_" . $current_user->ID);
 
             <div class="orcamento__container container" id="orcamento">
                 <h1 class="container__header">Proposta</h1>
-                
-                <div class="files__grid">
+                <div class="propostas__container">
                     <?php 
-                        $rows = get_field("orcamento", "user_" . $current_user->ID);
-                        if($rows): 
-                            foreach ($rows as $row) {
-                                ?>
-                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                                        <p class="file__description"><?php echo $row["nome_do_orcamento"] ?></p>
-                                    </a>
-                                <?php 
-                            }
-                        else :
-                            ?>
-                                <h1>Ainda não há orçamentos disponiveis.</h1>
-                            <?php
-                        endif; 
-                    ?>
+        
+                        $proposta = get_field('proposta', 'user_' . $current_user->ID);
+
+                        if( !empty($proposta['proposta_1']) ): ?>
+                            <a class="button" href="<?php echo $proposta['proposta_1']; ?>" target="_blank">
+                                <p class="file__description">Proposta 1/3</p> 
+                            </a>
+                        <?php else: ?>
+                            <a class="button disabled" href="#" target="_blank">
+                            <p class="file__description">Proposta 1/3</p> 
+                        </a> 
+                        <?php
+                        endif;
+                        ?>
                 </div>
 
             </div>
