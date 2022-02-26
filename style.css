@@ -1223,3 +1223,9 @@ input#wp-submit.button.button-primary {
 	border: none;
 	height: 75px;
 }
+
+.projectspage__wrapper {
+	background-color: #E0C794;
+	min-height: 100vh;
+	padding: 64px;
+}
