@@ -1055,7 +1055,7 @@ textarea {
     font-weight: 600;
     font-size: 36px;
     line-height: 44px;
-    color: #262626;
+    color: #E0C794;
     place-self: flex-start;
     margin: 0 auto;
     width: 700px;
@@ -1256,4 +1256,19 @@ input#wp-submit.button.button-primary {
 	letter-spacing: 0.02em;
 	color: #262626;
 	margin: 0;
+}
+
+.projects__wrapper {
+	margin-top: 130px;
+	gap: 12px;
+}
+
+.placeholder__project {
+	font-weight: 900;
+	font-size: 26px;
+	line-height: 130.9%;
+	color: #262626;
+	margin: 0;
+	cursor: pointer;
+	display: inline-block;
 }
