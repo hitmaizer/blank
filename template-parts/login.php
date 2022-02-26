@@ -12,10 +12,10 @@
     <?php
     if ( ! is_user_logged_in() ) { // Display WordPress login form:
         $args = array(
-            'redirect' => home_url( '/user-profile/' ), 
+            'redirect' => home_url( '/user-projects/' ), 
             'form_id' => 'loginform-custom',
-            'label_username' => __( 'Username' ),
-            'label_password' => __( 'Password' ),
+            'label_username' => __( 'Utilizador' ),
+            'label_password' => __( 'Palavra-chave' ),
             'label_remember' => __( 'Lembrar-me' ),
             'label_log_in' => __( 'Entrar' ),
             'remember' => true
