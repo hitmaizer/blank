@@ -989,7 +989,7 @@ textarea {
 .page__sidebar {
     min-height: 100vh;
     background-color: #262626;
-    padding: 64px;
+	padding: 32px;
     justify-content: center;
 }
 
@@ -997,22 +997,33 @@ textarea {
     list-style-type: none;
     gap: 32px;
     padding: 0;
+	max-width: 584px;
     
+}
+
+.sidebar__top {
+	gap: 8px;
+	margin-top: 80px;
+}
+
+.sidebar__bottom {
+	margin-top: 100px;
+	gap: 8px;
+	
 }
 
 .list__item {
     align-items: center;
     cursor: pointer;
-    width: 300px;
     justify-content: space-between;
     
 }
 
 .list__item li {
-    color: white;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 34px;
+    color: #E0C794;
+    font-weight: 800;
+	font-size: 25px;
+	line-height: 130.9%;
     transition: all .1s ease;
     position: relative;
     
@@ -1020,6 +1031,7 @@ textarea {
 
 .list__item li:hover {
     font-weight: 800;
+	color: white;
 }
 
 .list__item li::after {
@@ -1052,10 +1064,10 @@ textarea {
 }
 
 .welcome__header {
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 44px;
-    color: #E0C794;
+    font-weight: 800;
+	font-size: 25px;
+	line-height: 130.9%;
+	color: #DFC693;
     place-self: flex-start;
     margin: 0 auto;
     width: 700px;
