@@ -1351,3 +1351,26 @@ input#wp-submit.button.button-primary {
 	cursor: pointer;
 	display: inline-block;
 }
+
+.propostas__container {
+	margin-top: 64px;
+}
+
+.proposta__final {
+	margin-top: 40px;
+}
+
+p.propostafile__description.disabled {
+	color: white;
+	opacity: 0.5;
+	cursor: default;
+}
+
+.propostafile__description {
+	font-weight: 800;
+    font-size: 26px;
+    line-height: 130.9%;
+    letter-spacing: -0.025em;
+    color: #262626;
+    margin-bottom: 0;
+}
