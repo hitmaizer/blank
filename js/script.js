@@ -1,3 +1,4 @@
+
 function statusHandler() {
     const statusToggle = document.getElementById('status_toggle')
     const statusDiv = document.getElementById('status')
@@ -19,16 +20,18 @@ function propostaHandler() {
     const propostaToggle = document.getElementById('proposta_toggle')
     const propostaDiv = document.getElementById('proposta')
     const groupElements = document.querySelectorAll('.show')
+    const selectedElements = document.querySelectorAll('.selected')
 
-    if (propostaToggle.classList.contains('show')) {
-        propostaToggle.classList.remove('show')
+    if (propostaToggle.classList.contains('show', 'selected')) {
+        propostaToggle.classList.remove('show', 'selected')
     } else {
         groupElements.forEach(e => {
-            if(e.classList.contains('show')) {
-                e.classList.remove('show')
+            if(e.classList.contains('show', 'selected')) {
+                e.classList.remove('show', 'selected')
         }
     })
     propostaDiv.classList.add('show')
+    propostaToggle.classList.add('selected')
     }
 }
 
@@ -116,3 +119,4 @@ function finalHandler() {
     finalDiv.classList.add('show')
     }
 }
+
