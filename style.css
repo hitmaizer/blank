@@ -1229,3 +1229,31 @@ input#wp-submit.button.button-primary {
 	min-height: 100vh;
 	padding: 64px;
 }
+
+.content__container {
+	gap: 40px;
+}
+
+.menu__wrapper {
+	background-color: #262626; 
+	color: #E0C794;
+	min-width: 600px;
+	min-height: 560px;
+}
+
+.menu__header {
+	font-weight: 900;
+	font-size: 26px;
+	line-height: 130.9%;
+	letter-spacing: -0.005em;
+	padding: 16px 40px;
+}
+
+.projects__title {
+	font-weight: 900;
+	font-size: 74px;
+	line-height: 130.9%;
+	letter-spacing: 0.02em;
+	color: #262626;
+	margin: 0;
+}
