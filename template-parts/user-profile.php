@@ -18,31 +18,31 @@ $status = get_field("status", "user_" . $current_user->ID);
                 <h1 class="welcome__header">Olá, <?php echo $username ?></h1>
                 <div class="sidebar__top flex-col">
                     <div class="list__item flex-row" id="status_toggle" onclick="statusHandler()">
-                        <li class="selected">Processo</li>
+                        <li  id="processo_btn" class="selected">Processo</li>
                     </div>
                     <div class="list__item flex-row" id="proposta_toggle" onclick="propostaHandler()">
-                        <li>Investimento</li>
+                        <li  id="investimento_btn" onclick="toggleSelected('investimento_btn')">Investimento</li>
                     </div>
                     <div class="list__item flex-row" id="orcamento_toggle" onclick="orcamentoHandler()">
-                        <li>Proposta</li>
+                        <li id="proposta_btn">Proposta</li>
                     </div>
                     <div class="list__item flex-row" id="fase1_toggle" onclick="fase1Handler()">
-                        <li>Ficheiros</li>
+                        <li id="ficheiros_btn">Ficheiros</li>
                     </div>
                     <div class="list__item flex-row" id="fase2_toggle" onclick="fase2Handler()">
-                        <li>Documentos</li>
+                        <li id="documentos_btn">Documentos</li>
                     </div>
                     <div class="list__item flex-row" id="fase3_toggle" onclick="fase3Handler()">
-                        <li>Financeiro</li>
+                        <li id="financeiro_btn">Financeiro</li>
                     </div>
                 </div>
 
                 <div class="sidebar__bottom flex-col">
                     <div class="list__item flex-row" id="final_toggle" onclick="finalHandler()">
-                        <li>Os meus dados</li>
+                        <li id="dados_btn">Os meus dados</li>
                     </div>
                     <div class="list__item flex-row" id="final_toggle" onclick="finalHandler()">
-                        <li>Descarregar todos os ficheiros</li>
+                        <li id="all_btn">Descarregar todos os ficheiros</li>
                     </div>
                 </div>
             </ul>
@@ -85,8 +85,8 @@ $status = get_field("status", "user_" . $current_user->ID);
                             }
                         ?>
                     </div>
-                    <div class="grid__bottom">
-                        <div class="bottom__item">
+                    <div class="grid__bottom flex-row">
+                        <div class="bottom__item item--1">
                             <h3 class="griditem__title">I - Diagnóstico</h3>
                             <h6 class="griditem__subtitle">A escolha dos condimentos!</h6>
                             <p class="griditem__text">Nesta fase mergulhamos no seu 
@@ -94,7 +94,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                                 o posicionamento que iremos trabalhar 
                                 no desenvolvimento do objeto.</p>
                         </div>
-                        <div class="bottom__item">
+                        <div class="bottom__item item--2">
                             <h3 class="griditem__title">II - Criação</h3>
                             <h6 class="griditem__subtitle">É o momento da emulsão!</h6>
                             <p class="griditem__text">Vamos definir e estruturar o mais 
@@ -104,7 +104,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                                 Dá-se início ao processo criativo para 
                                 desenvolver o objeto.</p>
                         </div>
-                        <div class="bottom__item">
+                        <div class="bottom__item item--3">
                             <h3 class="griditem__title">III - Execução</h3>
                             <h6 class="griditem__subtitle">Condimentamos o seu projeto!</h6>
                             <p class="griditem__text">Para finalizar a receita, é apresentada a 
