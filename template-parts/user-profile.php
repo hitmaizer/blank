@@ -304,27 +304,20 @@ $status = get_field("status", "user_" . $current_user->ID);
             </div>
 
             <div class="final__container" id="final">
-                <h1 class="container__header final__header">Aqui pode consultar os ficheiros finais do seu projecto</h1>
-                <div class="files__grid final__files">
-            
-                    <?php 
-                        $rows = get_field("final_files", "user_" . $current_user->ID);
-                        if($rows): 
-                            foreach ($rows as $row) {
-                                ?>
-                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                                        <p class="file__description"><?php echo $row["nome_do_ficheiro"] ?></p>
-                                    </a>
-                                <?php 
-                            }
-                        else :
-                            ?>
-                                <h1>Ainda não há ficheiros finais disponiveis.</h1>
-                            <?php
-                        endif; 
-                    ?>
-
+                <h1 class="container__header">Os meus dados</h1>
+                <div class="data__grid">
+                    <div class="data__section empresa">
+                        <h1 class="section__title">Dados da Empresa</h1>
+                    </div>
+                    <div class="data__section faturacao">
+                        <h1 class="section__title">Dados da Faturação</h1>
+                    </div>
+                    <div class="data__section representante">
+                        <h1 class="section__title">Dados do Representante</h1>
+                    </div>
+                    <div class="data__section projeto">
+                        <h1 class="section__title">Dados do Projeto</h1>
+                    </div>
                 </div>
             </div>
 
