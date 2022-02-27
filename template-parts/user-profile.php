@@ -4,7 +4,7 @@
 get_header();
 $username = wp_get_current_user()->user_firstname;
 $current_user = wp_get_current_user();
-$status = get_field("status", "user_" . $current_user->ID);
+$index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
 
 
@@ -56,33 +56,44 @@ $status = get_field("status", "user_" . $current_user->ID);
                 <div class="process__grid">
                     <div class="grid__topimg">
                         <?php 
-                            switch($status["value"]) {
-                                case "proposta": 
-                                    ?>
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/status1.png" alt="" class="status__img">
-                                <?php
-                                break;
-                                case "orcamento": 
-                                    ?>
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/status2.png" alt="" class="status__img">
-                                <?php
-                                break;
-                                case "fase1": 
-                                    ?>
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/status3.png" alt="" class="status__img">
-                                <?php
-                                break;
-                                case "final": 
-                                    ?>
-                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
-                                <?php
-                                break;
-                                default : 
-                                    ?>
-                                <h1>O seu projecto ainda vai ser iniciado.</h1>
-                                <?php
-                                break;
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while (have_rows('projeto', "user_" . $current_user->ID)) {
+                              the_row();
+                              $counter++;
+                              $subfield = get_sub_field('status');
+                              if ($counter == $index) {
+                                switch($subfield) {
+                                    case "standart": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/status1.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "processo": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/status2.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "investimento": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/status3.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "final": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    default : 
+                                        ?>
+                                    <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                    <?php
+                                    break;
+                                }
+                              }
                             }
+                          }
+                        
                         ?>
                     </div>
                     <div class="grid__bottom flex-row">
@@ -120,17 +131,29 @@ $status = get_field("status", "user_" . $current_user->ID);
                 <h1 class="container__header">Investimento</h1>
                 <div class="investimento__section">
                     <?php 
-                        $link = get_field('investimento', "user_" . $current_user->ID);
-                        if($link): ?>
-                            <a class="button" href="<?php echo esc_url( $link ); ?>" target="_blank">
-                                <p class="file__description">Proposta e investimento</p> 
-                            </a>
-                                
-                            <?php                             
-                            else :
-                                ?>
-                                    <h1 class="griditem__title">Ainda não tem a proposta disponivel.</h1>
-                        <?php endif; ?>
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while (have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('investimento');
+                                if ($counter == $index) {
+                                    if($subfield) {
+                                        ?>
+                                        <a class="button" href="<?php echo esc_url( $subfield ); ?>" target="_blank">
+                                            <p class="file__description">Proposta e investimento</p>
+                                        </a>
+                                        <?php                             
+                                    } else {
+                                    ?>
+                                    <p class="file__description disabled">Proposta e investimento</p>
+                                    <?php
+                                    }
+                                    
+                                } 
+                            }
+                        }
+                    ?>
                 </div>
             </div>
 
