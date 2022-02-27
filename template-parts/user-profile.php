@@ -135,7 +135,7 @@ $status = get_field("status", "user_" . $current_user->ID);
 
             <div class="orcamento__container container" id="orcamento">
                 <h1 class="container__header">Proposta</h1>
-                <div class="propostas__container">
+                <div class="propostas__container flex-col">
                     <?php 
                         $proposta = get_field('proposta', 'user_' . $current_user->ID);
                         if( !empty($proposta['proposta_1']) ): ?>
@@ -186,28 +186,32 @@ $status = get_field("status", "user_" . $current_user->ID);
             </div>
 
             <div class="fase1__container" id="fase1">
-                <h1 class="container__header fase__header">Aqui pode consultar a Fase 1 do seu Projecto.</h1>
-                
-                <div class="files__grid">
+                <h1 class="container__header">Ficheiros</h1>
+                <div class="ficheiros__section flex-col">
                     <?php 
-                        $rows = get_field("fase_1", "user_" . $current_user->ID);
-                        if($rows): 
-                            foreach ($rows as $row) {
-                                ?>
-                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                                        <p class="file__description"><?php echo $row["name"] ?></p>
-                                    </a>
-                                <?php 
-                            }
-                        else :
-                            ?>
-                                <h1>Ainda não há elementos disponiveis.</h1>
+                            $ficheiros = get_field('ficheiros', 'user_' . $current_user->ID);
+                            if( !empty($ficheiros['ficheiros_finais']) ): ?>
+                                <a class="button" href="<?php echo $ficheiros['ficheiros_finais']; ?>" target="_blank">
+                                    <p class="propostafile__description">Finais</p> 
+                                </a>
+                            <?php else: ?>
+                                <p class="propostafile__description disabled">Finais</p>  
                             <?php
-                        endif; 
-                    ?>
-                </div>
+                            endif;
+                            ?>
+                    <?php 
+                            $ficheiros = get_field('ficheiros', 'user_' . $current_user->ID);
+                            if( !empty($ficheiros['ficheiros_execucao']) ): ?>
+                                <a class="button" href="<?php echo $ficheiros['ficheiros_execucao']; ?>" target="_blank">
+                                    <p class="propostafile__description">Em execução</p> 
+                                </a>
+                            <?php else: ?>
+                                <p class="propostafile__description disabled">Em execução</p>  
+                            <?php
+                            endif;
+                            ?>
 
+                </div>
             </div>
             <div class="fase2__container" id="fase2">
 
