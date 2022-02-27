@@ -20,28 +20,28 @@ $status = get_field("status", "user_" . $current_user->ID);
                     <div class="list__item flex-row" id="status_toggle" onclick="statusHandler()">
                         <li  id="processo_btn" class="selected">Processo</li>
                     </div>
-                    <div class="list__item flex-row" id="proposta_toggle" onclick="propostaHandler()">
+                    <div class="list__item flex-row" id="investimento_toggle" onclick="investimentoHandler()">
                         <li  id="investimento_btn">Investimento</li>
                     </div>
-                    <div class="list__item flex-row" id="orcamento_toggle" onclick="orcamentoHandler()">
+                    <div class="list__item flex-row" id="proposta_toggle" onclick="propostaHandler()">
                         <li id="proposta_btn">Proposta</li>
                     </div>
-                    <div class="list__item flex-row" id="fase1_toggle" onclick="fase1Handler()">
+                    <div class="list__item flex-row" id="ficheiros_toggle" onclick="ficheirosHandler()">
                         <li id="ficheiros_btn">Ficheiros</li>
                     </div>
-                    <div class="list__item flex-row" id="fase2_toggle" onclick="fase2Handler()">
+                    <div class="list__item flex-row" id="documentos_toggle" onclick="documentosHandler()">
                         <li id="documentos_btn">Documentos</li>
                     </div>
-                    <div class="list__item flex-row" id="fase3_toggle" onclick="fase3Handler()">
+                    <div class="list__item flex-row" id="financeiro_toggle" onclick="financeiroHandler()">
                         <li id="financeiro_btn">Financeiro</li>
                     </div>
                 </div>
 
                 <div class="sidebar__bottom flex-col">
-                    <div class="list__item flex-row" id="final_toggle" onclick="finalHandler()">
+                    <div class="list__item flex-row" id="dados_toggle" onclick="dadosHandler()">
                         <li id="dados_btn">Os meus dados</li>
                     </div>
-                    <div class="list__item flex-row" id="final_toggle" onclick="finalHandler()">
+                    <div class="list__item flex-row" id="downloads_toggle" onclick="downloadsHandler()">
                         <li id="all_btn">Descarregar todos os ficheiros</li>
                     </div>
                 </div>
@@ -116,7 +116,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                 </div>
             </div>
 
-            <div class="proposta__container container" id="proposta">
+            <div class="investimento__container container" id="investimento">
                 <h1 class="container__header">Investimento</h1>
                 <div class="investimento__section">
                     <?php 
@@ -134,7 +134,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                 </div>
             </div>
 
-            <div class="orcamento__container container" id="orcamento">
+            <div class="proposta__container container" id="proposta">
                 <h1 class="container__header">Proposta</h1>
                 <div class="propostas__container flex-col">
                     <?php 
@@ -186,7 +186,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                 </div>
             </div>
 
-            <div class="fase1__container" id="fase1">
+            <div class="ficheiros__container" id="ficheiros">
                 <h1 class="container__header">Ficheiros</h1>
                 <div class="ficheiros__section flex-col">
                     <?php 
@@ -214,7 +214,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                 </div>
             </div>
             
-            <div class="fase2__container" id="fase2">
+            <div class="documentos__container" id="documentos">
                 <h1 class="container__header">Documentos</h1>
                 <div class="documentos__section flex-col">
                 <?php 
@@ -253,7 +253,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                 </div>
             </div>
             
-            <div class="fase3__container" id="fase3">
+            <div class="financeiro__container" id="financeiro">
                 <h1 class="container__header">Financeiro</h1>
                 <div class="financeiro__section flex-col">
                     <?php 
@@ -303,7 +303,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                 </div>
             </div>
 
-            <div class="final__container" id="final">
+            <div class="dados__container" id="dados">
                 <h1 class="container__header">Os meus dados</h1>
                 <div class="data__grid">
                     <div class="data__section empresa">
@@ -415,7 +415,7 @@ $status = get_field("status", "user_" . $current_user->ID);
             
             <div class="downloads__container" id="downloads">
                 <h1 class="container__header">Ficheiros</h1>
-                <div class="results__section">
+                <div class="results__section flex-col">
                 <?php 
                         $ficheiros = get_field('all_files', 'user_' . $current_user->ID);
                         if( !empty($ficheiros['finais']) ): ?>
