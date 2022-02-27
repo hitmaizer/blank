@@ -1382,3 +1382,8 @@ p.file__description.disabled {
 	margin-top: 56px;
 	gap: 8px;
 }
+
+.data__grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
