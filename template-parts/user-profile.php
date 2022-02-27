@@ -307,24 +307,33 @@ $status = get_field("status", "user_" . $current_user->ID);
                 <h1 class="container__header">Os meus dados</h1>
                 <div class="data__grid">
                     <div class="data__section empresa">
+                        <?php 
+                            $dados = get_field('dados_empresa', 'user_' . $current_user->ID);
+                        ?>
                         <h1 class="section__title">Dados da Empresa</h1>
                         <div class="section__field flex-row">
                             <h6 class="field__label">Nome:</h6>
+                            <p class="field__text"><?php echo $dados['nome_empresa']; ?></p>
                         </div>
                         <div class="section__field flex-row">
                             <h6 class="field__label">Morada:</h6>
+                            <p class="field__text"><?php echo $dados['morada_empresa']; ?></p>
                         </div>
                         <div class="section__field flex-row">
                             <h6 class="field__label">Código Postal:</h6>
+                            <p class="field__text"><?php echo $dados['codigo_postal_empresa']; ?></p>
                         </div>
                         <div class="section__field flex-row">
                             <h6 class="field__label">Localidade:</h6>
+                            <p class="field__text"><?php echo $dados['localidade_empresa']; ?></p>
                         </div>
                         <div class="section__field flex-row">
                             <h6 class="field__label">Endereço eletrónico:</h6>
+                            <p class="field__text"><?php echo $dados['endreco_eletronico_empresa']; ?></p>
                         </div>
                         <div class="section__field flex-row">
                             <h6 class="field__label">Data de fundação:</h6>
+                            <p class="field__text"><?php echo $dados['data_de_fundacao_empresa']; ?></p>
                         </div>
                     </div>
                     <div class="data__section faturacao">
