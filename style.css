@@ -1084,10 +1084,10 @@ a {
     
 }
 
-.status__container, .proposta__container, 
-.orcamento__container, .fase1__container,
-.fase2__container, .fase3__container,
-.final__container, .downloads__container {
+.status__container, .investimento__container, 
+.proposta__container, .ficheiros__container,
+.documentos__container, .financeiro__container,
+.dados__container, .downloads__container {
     display: none;
 }
 
@@ -1379,6 +1379,11 @@ p.file__description.disabled {
 }
 
 .financeiro__section {
+	margin-top: 56px;
+	gap: 8px;
+}
+
+.results__section {
 	margin-top: 56px;
 	gap: 8px;
 }
