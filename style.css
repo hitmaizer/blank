@@ -1156,19 +1156,6 @@ a {
 	margin-top: 24px;
 }
 
-.file__description {
-	margin-top: 16px;
-	font-weight: 800;
-	font-size: 26px;
-	line-height: 130.9%;
-	letter-spacing: -0.025em;
-	color: #262626;
-	margin-top: 56px;
-}
-
-.file__description:hover {
-	color: white;
-}
 
 .file__container {
     display: flex;
@@ -1361,14 +1348,14 @@ input#wp-submit.button.button-primary {
 	margin-top: 40px;
 }
 
-p.propostafile__description.disabled {
+p.file__description.disabled {
 	color: white;
 	opacity: 0.5;
 	cursor: default;
 	
 }
 
-.propostafile__description {
+.file__description {
 	font-weight: 800;
     font-size: 26px;
     line-height: 130.9%;
