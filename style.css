@@ -1386,4 +1386,24 @@ p.file__description.disabled {
 .data__grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	gap: 64px;
+	margin-top: 56px;
+}
+
+.section__title {
+	font-weight: 800;
+	font-size: 26px;
+	line-height: 130.9%;
+	letter-spacing: -0.025em;
+	color: #262626;
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.field__label {
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 130.9%;
+	letter-spacing: -0.025em;
+	color: #262626;
 }
