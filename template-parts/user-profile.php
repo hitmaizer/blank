@@ -143,9 +143,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                                 <p class="propostafile__description">Proposta 1/3</p> 
                             </a>
                         <?php else: ?>
-                            <a class="button" href="#" target="_blank">
                             <p class="propostafile__description disabled">Proposta 1/3</p> 
-                        </a> 
                         <?php
                         endif;
                         ?>
@@ -156,9 +154,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                                 <p class="propostafile__description">Proposta 2/3</p> 
                             </a>
                         <?php else: ?>
-                            <a class="button" href="#" target="_blank">
-                            <p class="propostafile__description disabled">Proposta 2/3</p> 
-                        </a> 
+                            <p class="propostafile__description disabled">Proposta 2/3</p>  
                         <?php
                         endif;
                         ?>
@@ -169,9 +165,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                                 <p class="propostafile__description">Proposta 3/3</p> 
                             </a>
                         <?php else: ?>
-                            <a class="button" href="#" target="_blank">
-                            <p class="propostafile__description disabled">Proposta 3/3</p> 
-                        </a> 
+                            <p class="propostafile__description disabled">Proposta 3/3</p>  
                         <?php
                         endif;
                         ?>
@@ -184,9 +178,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                                 <p class="propostafile__description">Proposta Final</p> 
                             </a>
                         <?php else: ?>
-                            <a class="button" href="#" target="_blank">
-                            <p class="propostafile__description disabled">Proposta Final</p> 
-                        </a> 
+                            <p class="propostafile__description disabled">Proposta Final</p>  
                         <?php
                         endif;
                         ?>
