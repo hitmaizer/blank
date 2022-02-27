@@ -1354,6 +1354,7 @@ input#wp-submit.button.button-primary {
 
 .propostas__container {
 	margin-top: 64px;
+	gap: 8px;
 }
 
 .proposta__final {
@@ -1374,4 +1375,9 @@ p.propostafile__description.disabled {
     letter-spacing: -0.025em;
     color: #262626;
     margin-bottom: 0;
+}
+
+.ficheiros__section {
+	margin-top: 48px;
+	gap: 32px;
 }
