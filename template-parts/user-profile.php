@@ -412,53 +412,73 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             }
                         }
                     ?>
-
-
                         
                     </div>
                     <div class="data__section representante">
-                        <?php 
-                            $dados = get_field('dados_representante', 'user_' . $current_user->ID);
-                        ?>
                         <h1 class="section__title">Dados do Representante</h1>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Nome:</h6>
-                            <p class="field__text"><?php echo $dados['nome_representante']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Telemóvel:</h6>
-                            <p class="field__text"><?php echo $dados['telemovel_representante']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Endereço eletrónico:</h6>
-                            <p class="field__text"><?php echo $dados['endereco_eletronico_representante']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Data de nascimento:</h6>
-                            <p class="field__text"><?php echo $dados['data_de_nascimento_representante']; ?></p>
-                        </div>
+                        <?php 
+                            if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while (have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('dados_representante');
+                                if ($counter == $index) {
+                                ?>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Nome:</h6>
+                                        <p class="field__text"><?php echo $subfield['nome_representante']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Telemóvel:</h6>
+                                        <p class="field__text"><?php echo $subfield['telemovel_representante']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Endereço eletrónico:</h6>
+                                        <p class="field__text"><?php echo $subfield['endereco_eletronico_representante']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Data de nascimento:</h6>
+                                        <p class="field__text"><?php echo $subfield['data_de_nascimento_representante']; ?></p>
+                                    </div>
+                                <?php        
+                                } 
+                            }
+                        }
+                    ?>
                     </div>
                     <div class="data__section projeto">
-                        <?php 
-                            $dados = get_field('dados_projeto', 'user_' . $current_user->ID);
-                        ?>
                         <h1 class="section__title">Dados do Projeto</h1>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Tipologia:</h6>
-                            <p class="field__text"><?php echo $dados['tipologia_projeto']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Descrição do projeto:</h6>
-                            <p class="field__text"><?php echo $dados['descricao_projeto']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Link do website:</h6>
-                            <p class="field__text"><?php echo $dados['link_website_projeto']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Link de redes sociais:</h6>
-                            <p class="field__text"><?php echo $dados['link_redes_sociais_projeto']; ?></p>
-                        </div>
+                        <?php 
+                            if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while (have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('dados_projeto');
+                                if ($counter == $index) {
+                                ?>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Tipologia:</h6>
+                                        <p class="field__text"><?php echo $subfield['tipologia_projeto']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Descrição do projeto:</h6>
+                                        <p class="field__text"><?php echo $subfield['descricao_projeto']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Link do website:</h6>
+                                        <p class="field__text"><?php echo $subfield['link_website_projeto']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Link de redes sociais:</h6>
+                                        <p class="field__text"><?php echo $subfield['link_redes_sociais_projeto']; ?></p>
+                                    </div>
+                                <?php        
+                                } 
+                            }
+                        }
+                    ?>
                     </div>
                 </div>
             </div>
