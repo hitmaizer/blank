@@ -1364,12 +1364,21 @@ p.file__description.disabled {
     margin-bottom: 0;
 }
 
+.investimento__section {
+	margin-top: 56px;
+}
+
 .ficheiros__section {
 	margin-top: 48px;
 	gap: 32px;
 }
 
 .documentos__section {
+	margin-top: 56px;
+	gap: 8px;
+}
+
+.financeiro__section {
 	margin-top: 56px;
 	gap: 8px;
 }
