@@ -308,15 +308,75 @@ $status = get_field("status", "user_" . $current_user->ID);
                 <div class="data__grid">
                     <div class="data__section empresa">
                         <h1 class="section__title">Dados da Empresa</h1>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Nome:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Morada:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Código Postal:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Localidade:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Endereço eletrónico:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Data de fundação:</h6>
+                        </div>
                     </div>
                     <div class="data__section faturacao">
                         <h1 class="section__title">Dados da Faturação</h1>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Nome:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Morada:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Código Postal:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Localidade:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">NIF/NIPC:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Endereço eletrónico:</h6>
+                        </div>
                     </div>
                     <div class="data__section representante">
                         <h1 class="section__title">Dados do Representante</h1>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Nome:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Telemóvel:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Endereço eletrónico:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Data de nascimento:</h6>
+                        </div>
                     </div>
                     <div class="data__section projeto">
                         <h1 class="section__title">Dados do Projeto</h1>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Tipologia:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Descrição do projeto:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Link do website:</h6>
+                        </div>
+                        <div class="section__field flex-row">
+                            <h6 class="field__label">Link de redes sociais:</h6>
+                        </div>
                     </div>
                 </div>
             </div>
