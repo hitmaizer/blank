@@ -20,9 +20,9 @@ function statusHandler() {
     }
 }
 
-function propostaHandler() {
-    const propostaToggle = document.getElementById('proposta_toggle');
-    const propostaDiv = document.getElementById('proposta');
+function investimentoHandler() {
+    const propostaToggle = document.getElementById('investimento_toggle');
+    const propostaDiv = document.getElementById('investimento');
     const groupElements = document.querySelectorAll('.show');
     const selectedElements = document.querySelectorAll('.selected');
 
@@ -39,9 +39,9 @@ function propostaHandler() {
     }
 }
 
-function orcamentoHandler() {
-    const orcamentoToggle = document.getElementById('orcamento_toggle');
-    const orcamentoDiv = document.getElementById('orcamento');
+function propostaHandler() {
+    const orcamentoToggle = document.getElementById('proposta_toggle');
+    const orcamentoDiv = document.getElementById('proposta');
     const groupElements = document.querySelectorAll('.show');
 
     if (orcamentoToggle.classList.contains('show')) {
@@ -56,9 +56,9 @@ function orcamentoHandler() {
     }
 }
 
-function fase1Handler() {
-    const fase1Toggle = document.getElementById('fase1_toggle');
-    const fase1Div = document.getElementById('fase1');
+function ficheirosHandler() {
+    const fase1Toggle = document.getElementById('ficheiros_toggle');
+    const fase1Div = document.getElementById('ficheiros');
     const groupElements = document.querySelectorAll('.show');
 
     if (fase1Toggle.classList.contains('show')) {
@@ -73,9 +73,9 @@ function fase1Handler() {
     }
 }
 
-function fase2Handler() {
-    const fase2Toggle = document.getElementById('fase2_toggle');
-    const fase2Div = document.getElementById('fase2');
+function documentosHandler() {
+    const fase2Toggle = document.getElementById('documentos_toggle');
+    const fase2Div = document.getElementById('documentos');
     const groupElements = document.querySelectorAll('.show');
 
     if (fase2Toggle.classList.contains('show')) {
@@ -90,9 +90,9 @@ function fase2Handler() {
     }
 }
 
-function fase3Handler() {
-    const fase3Toggle = document.getElementById('fase3_toggle');
-    const fase3Div = document.getElementById('fase3');
+function financeiroHandler() {
+    const fase3Toggle = document.getElementById('financeiro_toggle');
+    const fase3Div = document.getElementById('financeiro');
     const groupElements = document.querySelectorAll('.show');
 
     if (fase3Toggle.classList.contains('show')) {
@@ -107,9 +107,25 @@ function fase3Handler() {
     }
 }
 
-function finalHandler() {
-    const finalToggle = document.getElementById('final_toggle');
-    const finalDiv = document.getElementById('final');
+function dadosHandler() {
+    const finalToggle = document.getElementById('dados_toggle');
+    const finalDiv = document.getElementById('dados');
+    const groupElements = document.querySelectorAll('.show');
+
+    if (finalToggle.classList.contains('show')) {
+        finalToggle.classList.remove('show');
+    } else {
+        groupElements.forEach((e) => {
+            if (e.classList.contains('show')) {
+                e.classList.remove('show');
+        }
+    });
+    finalDiv.classList.add('show');
+    }
+}
+function downloadsHandler() {
+    const finalToggle = document.getElementById('downloads_toggle');
+    const finalDiv = document.getElementById('downloads');
     const groupElements = document.querySelectorAll('.show');
 
     if (finalToggle.classList.contains('show')) {
