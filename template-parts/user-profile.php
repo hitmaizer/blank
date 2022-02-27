@@ -414,7 +414,32 @@ $status = get_field("status", "user_" . $current_user->ID);
             </div>
             
             <div class="downloads__container" id="downloads">
-                        
+                <h1 class="container__header">Ficheiros</h1>
+                <div class="results__section">
+                <?php 
+                        $ficheiros = get_field('all_files', 'user_' . $current_user->ID);
+                        if( !empty($ficheiros['finais']) ): ?>
+                            <a class="button" href="<?php echo $ficheiros['finais']; ?>" target="_blank">
+                                <p class="file__description">Finais</p> 
+                            </a>
+                        <?php else: ?>
+                            <p class="file__description disabled">Finais</p>  
+                    <?php
+                        endif;
+                    ?>
+                <?php 
+                        $ficheiros = get_field('all_files', 'user_' . $current_user->ID);
+                        if( !empty($ficheiros['execucao']) ): ?>
+                            <a class="button" href="<?php echo $ficheiros['execucao']; ?>" target="_blank">
+                                <p class="file__description">Execução</p> 
+                            </a>
+                        <?php else: ?>
+                            <p class="file__description disabled">Execução</p>  
+                    <?php
+                        endif;
+                    ?>
+                </div>
+
             </div>
 
         </div>
