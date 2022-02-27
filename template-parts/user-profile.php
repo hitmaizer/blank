@@ -140,10 +140,10 @@ $status = get_field("status", "user_" . $current_user->ID);
                         $proposta = get_field('proposta', 'user_' . $current_user->ID);
                         if( !empty($proposta['proposta_1']) ): ?>
                             <a class="button" href="<?php echo $proposta['proposta_1']; ?>" target="_blank">
-                                <p class="propostafile__description">Proposta 1/3</p> 
+                                <p class="file__description">Proposta 1/3</p> 
                             </a>
                         <?php else: ?>
-                            <p class="propostafile__description disabled">Proposta 1/3</p> 
+                            <p class="file__description disabled">Proposta 1/3</p> 
                         <?php
                         endif;
                         ?>
@@ -151,10 +151,10 @@ $status = get_field("status", "user_" . $current_user->ID);
                         $proposta = get_field('proposta', 'user_' . $current_user->ID);
                         if( !empty($proposta['proposta_2']) ): ?>
                             <a class="button" href="<?php echo $proposta['proposta_2']; ?>" target="_blank">
-                                <p class="propostafile__description">Proposta 2/3</p> 
+                                <p class="file__description">Proposta 2/3</p> 
                             </a>
                         <?php else: ?>
-                            <p class="propostafile__description disabled">Proposta 2/3</p>  
+                            <p class="file__description disabled">Proposta 2/3</p>  
                         <?php
                         endif;
                         ?>
@@ -162,10 +162,10 @@ $status = get_field("status", "user_" . $current_user->ID);
                         $proposta = get_field('proposta', 'user_' . $current_user->ID);
                         if( !empty($proposta['proposta_3']) ): ?>
                             <a class="button" href="<?php echo $proposta['proposta_3']; ?>" target="_blank">
-                                <p class="propostafile__description">Proposta 3/3</p> 
+                                <p class="file__description">Proposta 3/3</p> 
                             </a>
                         <?php else: ?>
-                            <p class="propostafile__description disabled">Proposta 3/3</p>  
+                            <p class="file__description disabled">Proposta 3/3</p>  
                         <?php
                         endif;
                         ?>
@@ -175,10 +175,10 @@ $status = get_field("status", "user_" . $current_user->ID);
                         $proposta = get_field('proposta', 'user_' . $current_user->ID);
                         if( !empty($proposta['proposta_final']) ): ?>
                             <a class="button" href="<?php echo $proposta['proposta_final']; ?>" target="_blank">
-                                <p class="propostafile__description">Proposta Final</p> 
+                                <p class="file__description">Proposta Final</p> 
                             </a>
                         <?php else: ?>
-                            <p class="propostafile__description disabled">Proposta Final</p>  
+                            <p class="file__description disabled">Proposta Final</p>  
                         <?php
                         endif;
                         ?>
@@ -189,55 +189,69 @@ $status = get_field("status", "user_" . $current_user->ID);
                 <h1 class="container__header">Ficheiros</h1>
                 <div class="ficheiros__section flex-col">
                     <?php 
-                            $ficheiros = get_field('ficheiros', 'user_' . $current_user->ID);
-                            if( !empty($ficheiros['ficheiros_finais']) ): ?>
-                                <a class="button" href="<?php echo $ficheiros['ficheiros_finais']; ?>" target="_blank">
-                                    <p class="propostafile__description">Finais</p> 
-                                </a>
-                            <?php else: ?>
-                                <p class="propostafile__description disabled">Finais</p>  
-                            <?php
-                            endif;
-                            ?>
+                        $ficheiros = get_field('ficheiros', 'user_' . $current_user->ID);
+                        if( !empty($ficheiros['ficheiros_finais']) ): ?>
+                            <a class="button" href="<?php echo $ficheiros['ficheiros_finais']; ?>" target="_blank">
+                                <p class="file__description">Finais</p> 
+                            </a>
+                        <?php else: ?>
+                            <p class="file__description disabled">Finais</p>  
+                        <?php
+                        endif;
+                        ?>
                     <?php 
-                            $ficheiros = get_field('ficheiros', 'user_' . $current_user->ID);
-                            if( !empty($ficheiros['ficheiros_execucao']) ): ?>
-                                <a class="button" href="<?php echo $ficheiros['ficheiros_execucao']; ?>" target="_blank">
-                                    <p class="propostafile__description">Em execução</p> 
-                                </a>
-                            <?php else: ?>
-                                <p class="propostafile__description disabled">Em execução</p>  
-                            <?php
-                            endif;
-                            ?>
-
+                        $ficheiros = get_field('ficheiros', 'user_' . $current_user->ID);
+                        if( !empty($ficheiros['ficheiros_execucao']) ): ?>
+                            <a class="button" href="<?php echo $ficheiros['ficheiros_execucao']; ?>" target="_blank">
+                                <p class="file__description">Em execução</p> 
+                            </a>
+                        <?php else: ?>
+                            <p class="file__description disabled">Em execução</p>  
+                        <?php
+                        endif;
+                        ?>
                 </div>
             </div>
+            
             <div class="fase2__container" id="fase2">
-
-                <h1 class="container__header fase__header">Aqui pode consultar a Fase 2 do seu Projecto.</h1>
-                
-                <div class="files__grid">
-                    <?php 
-                        $rows = get_field("fase_1", "user_" . $current_user->ID);
-                        if($rows): 
-                            foreach ($rows as $row) {
-                                ?>
-                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                                        <p class="file__description"><?php echo $row["name"] ?></p>
-                                    </a>
-                                <?php 
-                            }
-                        else :
-                            ?>
-                                <h1>Ainda não há elementos disponiveis.</h1>
-                            <?php
-                        endif; 
+                <h1 class="container__header">Documentos</h1>
+                <div class="documentos__section flex-col">
+                <?php 
+                    $documentos = get_field('documentos', 'user_' . $current_user->ID);
+                    if( !empty($documentos['contrato']) ): ?>
+                        <a class="button" href="<?php echo $documentos['contrato']; ?>" target="_blank">
+                            <p class="file__description">Contrato</p> 
+                        </a>
+                    <?php else: ?>
+                        <p class="file__description disabled">Contrato</p>  
+                    <?php
+                    endif;
+                    ?>
+                <?php 
+                    $documentos = get_field('documentos', 'user_' . $current_user->ID);
+                    if( !empty($documentos['declaracao']) ): ?>
+                        <a class="button" href="<?php echo $documentos['declaracao']; ?>" target="_blank">
+                            <p class="file__description">Declaração</p> 
+                        </a>
+                    <?php else: ?>
+                        <p class="file__description disabled">Declaração</p>  
+                    <?php
+                    endif;
+                    ?>
+                <?php 
+                    $documentos = get_field('documentos', 'user_' . $current_user->ID);
+                    if( !empty($documentos['cedencia_de_direitos']) ): ?>
+                        <a class="button" href="<?php echo $documentos['cedencia_de_direitos']; ?>" target="_blank">
+                            <p class="file__description">Cedência de direitos de imagem e voz</p> 
+                        </a>
+                    <?php else: ?>
+                        <p class="file__description disabled">Cedência de direitos de imagem e voz</p>  
+                    <?php
+                    endif;
                     ?>
                 </div>
-            
             </div>
+            
             <div class="fase3__container" id="fase3">
                 <h1 class="container__header fase__header">Aqui pode consultar a Fase 3 do seu Projecto.</h1>
                 
