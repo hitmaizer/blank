@@ -1087,7 +1087,7 @@ a {
 .status__container, .proposta__container, 
 .orcamento__container, .fase1__container,
 .fase2__container, .fase3__container,
-.final__container {
+.final__container, .downloads__container {
     display: none;
 }
 
