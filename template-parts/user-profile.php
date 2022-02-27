@@ -118,19 +118,20 @@ $status = get_field("status", "user_" . $current_user->ID);
 
             <div class="proposta__container container" id="proposta">
                 <h1 class="container__header">Investimento</h1>
-                
-                <?php 
-                    $link = get_field('investimento', "user_" . $current_user->ID);
-                    if($link): ?>
-                        <a class="button" href="<?php echo esc_url( $link ); ?>" target="_blank">
-                            <p class="file__description">Proposta e investimento</p> 
-                        </a>
-                            
-                        <?php                             
-                        else :
-                            ?>
-                                <h1 class="griditem__title">Ainda não tem a proposta disponivel.</h1>
-                    <?php endif; ?>
+                <div class="investimento__section">
+                    <?php 
+                        $link = get_field('investimento', "user_" . $current_user->ID);
+                        if($link): ?>
+                            <a class="button" href="<?php echo esc_url( $link ); ?>" target="_blank">
+                                <p class="file__description">Proposta e investimento</p> 
+                            </a>
+                                
+                            <?php                             
+                            else :
+                                ?>
+                                    <h1 class="griditem__title">Ainda não tem a proposta disponivel.</h1>
+                        <?php endif; ?>
+                </div>
             </div>
 
             <div class="orcamento__container container" id="orcamento">
