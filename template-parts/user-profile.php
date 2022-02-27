@@ -145,7 +145,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                         <?php else: ?>
                             <p class="file__description disabled">Proposta 1/3</p> 
                         <?php
-                        endif;
+                            endif;
                         ?>
                     <?php 
                         $proposta = get_field('proposta', 'user_' . $current_user->ID);
@@ -156,7 +156,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                         <?php else: ?>
                             <p class="file__description disabled">Proposta 2/3</p>  
                         <?php
-                        endif;
+                            endif;
                         ?>
                     <?php 
                         $proposta = get_field('proposta', 'user_' . $current_user->ID);
@@ -167,7 +167,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                         <?php else: ?>
                             <p class="file__description disabled">Proposta 3/3</p>  
                         <?php
-                        endif;
+                            endif;
                         ?>
                 </div>
                 <div class="proposta__final">
@@ -180,7 +180,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                         <?php else: ?>
                             <p class="file__description disabled">Proposta Final</p>  
                         <?php
-                        endif;
+                            endif;
                         ?>
                 </div>
             </div>
@@ -197,7 +197,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                         <?php else: ?>
                             <p class="file__description disabled">Finais</p>  
                         <?php
-                        endif;
+                            endif;
                         ?>
                     <?php 
                         $ficheiros = get_field('ficheiros', 'user_' . $current_user->ID);
@@ -208,7 +208,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                         <?php else: ?>
                             <p class="file__description disabled">Em execução</p>  
                         <?php
-                        endif;
+                            endif;
                         ?>
                 </div>
             </div>
@@ -225,7 +225,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                     <?php else: ?>
                         <p class="file__description disabled">Contrato</p>  
                     <?php
-                    endif;
+                        endif;
                     ?>
                 <?php 
                     $documentos = get_field('documentos', 'user_' . $current_user->ID);
@@ -236,7 +236,7 @@ $status = get_field("status", "user_" . $current_user->ID);
                     <?php else: ?>
                         <p class="file__description disabled">Declaração</p>  
                     <?php
-                    endif;
+                        endif;
                     ?>
                 <?php 
                     $documentos = get_field('documentos', 'user_' . $current_user->ID);
@@ -247,34 +247,59 @@ $status = get_field("status", "user_" . $current_user->ID);
                     <?php else: ?>
                         <p class="file__description disabled">Cedência de direitos de imagem e voz</p>  
                     <?php
-                    endif;
+                        endif;
                     ?>
                 </div>
             </div>
             
             <div class="fase3__container" id="fase3">
-                <h1 class="container__header fase__header">Aqui pode consultar a Fase 3 do seu Projecto.</h1>
-                
-                <div class="files__grid">
+                <h1 class="container__header">Financeiro</h1>
+                <div class="financeiro__section flex-col">
                     <?php 
-                        $rows = get_field("fase_1", "user_" . $current_user->ID);
-                        if($rows): 
-                            foreach ($rows as $row) {
-                                ?>
-                                    <a href="<?php echo $row["ficheiro"] ?>" class="file__container" target="_blank">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/file.png" alt="" class="file__placeholder">
-                                        <p class="file__description"><?php echo $row["name"] ?></p>
-                                    </a>
-                                <?php 
-                            }
-                        else :
-                            ?>
-                                <h1>Ainda não há elementos disponiveis.</h1>
-                            <?php
-                        endif; 
+                        $financeiro = get_field('financeiro', 'user_' . $current_user->ID);
+                        if( !empty($financeiro['fatura_1']) ): ?>
+                            <a class="button" href="<?php echo $financeiro['fatura_1']; ?>" target="_blank">
+                                <p class="file__description">Fatura 1/2</p> 
+                            </a>
+                        <?php else: ?>
+                            <p class="file__description disabled">Fatura 1/2</p>  
+                    <?php
+                        endif;
+                    ?>
+                    <?php 
+                        $financeiro = get_field('financeiro', 'user_' . $current_user->ID);
+                        if( !empty($financeiro['recibo_1']) ): ?>
+                            <a class="button" href="<?php echo $financeiro['recibo_1']; ?>" target="_blank">
+                                <p class="file__description">Recibo 1/2</p> 
+                            </a>
+                        <?php else: ?>
+                            <p class="file__description disabled">Recibo 1/2</p>  
+                    <?php
+                        endif;
+                    ?>
+                    <?php 
+                        $financeiro = get_field('financeiro', 'user_' . $current_user->ID);
+                        if( !empty($financeiro['fatura_2']) ): ?>
+                            <a class="button" href="<?php echo $financeiro['fatura_2']; ?>" target="_blank">
+                                <p class="file__description">Fatura 2/2</p> 
+                            </a>
+                        <?php else: ?>
+                            <p class="file__description disabled">Fatura 2/2</p>  
+                    <?php
+                        endif;
+                    ?>
+                    <?php 
+                        $financeiro = get_field('financeiro', 'user_' . $current_user->ID);
+                        if( !empty($financeiro['recibo_2']) ): ?>
+                            <a class="button" href="<?php echo $financeiro['recibo_2']; ?>" target="_blank">
+                                <p class="file__description">Recibo 2/2</p> 
+                            </a>
+                        <?php else: ?>
+                            <p class="file__description disabled">Recibo 2/2</p>  
+                    <?php
+                        endif;
                     ?>
                 </div>
-
             </div>
 
             <div class="final__container" id="final">
