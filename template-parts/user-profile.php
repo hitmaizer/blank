@@ -412,6 +412,10 @@ $status = get_field("status", "user_" . $current_user->ID);
                     </div>
                 </div>
             </div>
+            
+            <div class="downloads__container" id="downloads">
+                        
+            </div>
 
         </div>
     </div>
