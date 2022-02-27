@@ -330,64 +330,91 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                 <h1 class="container__header">Os meus dados</h1>
                 <div class="data__grid">
                     <div class="data__section empresa">
-                        <?php 
-                            $dados = get_field('dados_empresa', 'user_' . $current_user->ID);
-                        ?>
-                        <h1 class="section__title">Dados da Empresa</h1>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Nome:</h6>
-                            <p class="field__text"><?php echo $dados['nome_empresa']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Morada:</h6>
-                            <p class="field__text"><?php echo $dados['morada_empresa']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Código Postal:</h6>
-                            <p class="field__text"><?php echo $dados['codigo_postal_empresa']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Localidade:</h6>
-                            <p class="field__text"><?php echo $dados['localidade_empresa']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Endereço eletrónico:</h6>
-                            <p class="field__text"><?php echo $dados['endreco_eletronico_empresa']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Data de fundação:</h6>
-                            <p class="field__text"><?php echo $dados['data_de_fundacao_empresa']; ?></p>
-                        </div>
+                    <h1 class="section__title">Dados da Empresa</h1>
+                    <?php 
+	                    if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while (have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('dados_empresa');
+                                if ($counter == $index) {
+                                    ?>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Nome:</h6>
+                                        <p class="field__text"><?php echo $subfield['nome_empresa']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Morada:</h6>
+                                        <p class="field__text"><?php echo $subfield['morada_empresa']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Código Postal:</h6>
+                                        <p class="field__text"><?php echo $subfield['codigo_postal_empresa']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Localidade:</h6>
+                                        <p class="field__text"><?php echo $subfield['localidade_empresa']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Endereço eletrónico:</h6>
+                                        <p class="field__text"><?php echo $subfield['endereco_eletronico_empresa']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Data de fundação:</h6>
+                                        <p class="field__text"><?php echo $subfield['data_de_fundacao_empresa']; ?></p>
+                                    </div>
+                                <?php
+                                } 
+                            }
+                        }
+                    ?>
+
                     </div>
                     <div class="data__section faturacao">
-                        <?php 
-                            $dados = get_field('dados_faturacao', 'user_' . $current_user->ID);
-                        ?>
                         <h1 class="section__title">Dados da Faturação</h1>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Nome:</h6>
-                            <p class="field__text"><?php echo $dados['nome_faturacao']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Morada:</h6>
-                            <p class="field__text"><?php echo $dados['morada_faturacao']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Código Postal:</h6>
-                            <p class="field__text"><?php echo $dados['codigo_postal_faturacao']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Localidade:</h6>
-                            <p class="field__text"><?php echo $dados['localidade_faturacao']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">NIF/NIPC:</h6>
-                            <p class="field__text"><?php echo $dados['nifnipc_faturacao']; ?></p>
-                        </div>
-                        <div class="section__field flex-row">
-                            <h6 class="field__label">Endereço eletrónico:</h6>
-                            <p class="field__text"><?php echo $dados['endereco_eletronico_faturacao']; ?></p>
-                        </div>
+
+                        <?php 
+                            if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while (have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('dados_faturacao');
+                                if ($counter == $index) {
+                                ?>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Nome:</h6>
+                                        <p class="field__text"><?php echo $subfield['nome_faturacao']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Morada:</h6>
+                                        <p class="field__text"><?php echo $subfield['morada_faturacao']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Código Postal:</h6>
+                                        <p class="field__text"><?php echo $subfield['codigo_postal_faturacao']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Localidade:</h6>
+                                        <p class="field__text"><?php echo $subfield['localidade_faturacao']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">NIF/NIPC:</h6>
+                                        <p class="field__text"><?php echo $subfield['nifnipc_faturacao']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Endereço eletrónico:</h6>
+                                        <p class="field__text"><?php echo $subfield['endereco_eletronico_faturacao']; ?></p>
+                                    </div>
+                                <?php        
+                                } 
+                            }
+                        }
+                    ?>
+
+
+                        
                     </div>
                     <div class="data__section representante">
                         <?php 
