@@ -428,50 +428,40 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             <div class="financeiro__container" id="financeiro">
                 <h1 class="container__header">Financeiro</h1>
                 <div class="financeiro__section flex-col">
-                    <?php 
-                        $financeiro = get_field('financeiro', 'user_' . $current_user->ID);
-                        if( !empty($financeiro['fatura_1']) ): ?>
-                            <a class="button" href="<?php echo $financeiro['fatura_1']; ?>" target="_blank">
-                                <p class="file__description">Fatura 1/2</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Fatura 1/2</p>  
                     <?php
-                        endif;
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('financeiro');
+                                if($counter == $index) {
+                                    if($subfield) {
+                                        if($subfield['fatura_1']) {
+                                            ?>
+                                            <a class="button" href="<?php echo $subfield['fatura_1']; ?>" target="_blank">
+                                                <p class="file__description">Fatura 1/2</p> 
+                                            </a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <p class="file__description disabled">Fatura 1/2</p> 
+                                            <?php
+                                        }
+                                    }                                         
+                                }
+                            }
+                        }
                     ?>
-                    <?php 
-                        $financeiro = get_field('financeiro', 'user_' . $current_user->ID);
-                        if( !empty($financeiro['recibo_1']) ): ?>
-                            <a class="button" href="<?php echo $financeiro['recibo_1']; ?>" target="_blank">
-                                <p class="file__description">Recibo 1/2</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Recibo 1/2</p>  
-                    <?php
-                        endif;
-                    ?>
-                    <?php 
-                        $financeiro = get_field('financeiro', 'user_' . $current_user->ID);
-                        if( !empty($financeiro['fatura_2']) ): ?>
-                            <a class="button" href="<?php echo $financeiro['fatura_2']; ?>" target="_blank">
-                                <p class="file__description">Fatura 2/2</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Fatura 2/2</p>  
-                    <?php
-                        endif;
-                    ?>
-                    <?php 
-                        $financeiro = get_field('financeiro', 'user_' . $current_user->ID);
-                        if( !empty($financeiro['recibo_2']) ): ?>
-                            <a class="button" href="<?php echo $financeiro['recibo_2']; ?>" target="_blank">
-                                <p class="file__description">Recibo 2/2</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Recibo 2/2</p>  
-                    <?php
-                        endif;
-                    ?>
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
 
