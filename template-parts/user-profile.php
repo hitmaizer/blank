@@ -180,52 +180,104 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             <div class="proposta__container container" id="proposta">
                 <h1 class="container__header">Proposta</h1>
                 <div class="propostas__container flex-col">
-                    <?php 
-                        $proposta = get_field('proposta', 'user_' . $current_user->ID);
-                        if( !empty($proposta['proposta_1']) ): ?>
-                            <a class="button" href="<?php echo $proposta['proposta_1']; ?>" target="_blank">
-                                <p class="file__description">Proposta 1/3</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Proposta 1/3</p> 
-                        <?php
-                            endif;
-                        ?>
-                    <?php 
-                        $proposta = get_field('proposta', 'user_' . $current_user->ID);
-                        if( !empty($proposta['proposta_2']) ): ?>
-                            <a class="button" href="<?php echo $proposta['proposta_2']; ?>" target="_blank">
-                                <p class="file__description">Proposta 2/3</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Proposta 2/3</p>  
-                        <?php
-                            endif;
-                        ?>
-                    <?php 
-                        $proposta = get_field('proposta', 'user_' . $current_user->ID);
-                        if( !empty($proposta['proposta_3']) ): ?>
-                            <a class="button" href="<?php echo $proposta['proposta_3']; ?>" target="_blank">
-                                <p class="file__description">Proposta 3/3</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Proposta 3/3</p>  
-                        <?php
-                            endif;
-                        ?>
+                    <?php
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('proposta');
+                                if($counter == $index) {
+                                    if($subfield) {
+                                        ?>
+                                        <a class="button" href="<?php echo $subfield['proposta_1']; ?>" target="_blank">
+                                            <p class="file__description">Proposta 1/3</p> 
+                                        </a>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <p class="file__description disabled">Proposta 1/3</p> 
+                                        <?php
+                                    }
+                                }
+                            }
+                        }
+                    ?>
+                    <?php
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('proposta');
+                                if($counter == $index) {
+                                    if($subfield) {
+                                        ?>
+                                        <a class="button" href="<?php echo $subfield['proposta_2']; ?>" target="_blank">
+                                            <p class="file__description">Proposta 2/3</p> 
+                                        </a>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <p class="file__description disabled">Proposta 2/3</p> 
+                                        <?php
+                                    }
+                                }
+                            }
+                        }
+                    ?>
+                    <?php
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('proposta');
+                                if($counter == $index) {
+                                    if($subfield) {
+                                        if($subfield['proposta_3']) {
+                                            ?>
+                                            <a class="button" href="<?php echo $subfield['proposta_3']; ?>" target="_blank">
+                                                <p class="file__description">Proposta 3/3</p> 
+                                            </a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <p class="file__description disabled">Proposta 3/3</p> 
+                                            <?php
+                                        }
+                                    } 
+                                    
+                                }
+                            }
+                        }
+                    ?>
+                    
                 </div>
                 <div class="proposta__final">
-                    <?php 
-                        $proposta = get_field('proposta', 'user_' . $current_user->ID);
-                        if( !empty($proposta['proposta_final']) ): ?>
-                            <a class="button" href="<?php echo $proposta['proposta_final']; ?>" target="_blank">
-                                <p class="file__description">Proposta Final</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Proposta Final</p>  
-                        <?php
-                            endif;
-                        ?>
+                <?php
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('proposta');
+                                if($counter == $index) {
+                                    if($subfield) {
+                                        ?>
+                                        <a class="button" href="<?php echo $subfield['proposta_final']; ?>" target="_blank">
+                                            <p class="file__description">Proposta Final</p> 
+                                        </a>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <p class="file__description disabled">Proposta Final</p> 
+                                        <?php
+                                    }
+                                }
+                            }
+                        }
+                    ?>
                 </div>
             </div>
 
