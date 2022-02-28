@@ -49,8 +49,6 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
         </div>
         <div class="page__content flex-col">
 
-            
-
             <div class="status__container container show" id="status">
                 <h1 class="container__header status__header">Processo</h1>
                 <div class="process__grid">
@@ -742,10 +740,8 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             }
                         }
                     ?>
-
                 </div>
             </div>
-
 
         </div>
     </div>
