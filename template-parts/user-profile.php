@@ -212,16 +212,18 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                 $subfield = get_sub_field('proposta');
                                 if($counter == $index) {
                                     if($subfield) {
-                                        ?>
-                                        <a class="button" href="<?php echo $subfield['proposta_2']; ?>" target="_blank">
-                                            <p class="file__description">Proposta 2/3</p> 
-                                        </a>
-                                        <?php
-                                    } else {
-                                        ?>
-                                        <p class="file__description disabled">Proposta 2/3</p> 
-                                        <?php
-                                    }
+                                        if($subfield['proposta_2']) {
+                                            ?>
+                                            <a class="button" href="<?php echo $subfield['proposta_2']; ?>" target="_blank">
+                                                <p class="file__description">Proposta 2/3</p> 
+                                            </a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                                <p class="file__description disabled">Proposta 2/3</p> 
+                                            <?php
+                                        }
+                                    } 
                                 }
                             }
                         }
