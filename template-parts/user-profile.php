@@ -340,29 +340,44 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                     }
                                 }
                             }
-                        ?>
-
-
-
-
-                    
+                        ?>                    
                 </div>
             </div>
             
             <div class="documentos__container" id="documentos">
                 <h1 class="container__header">Documentos</h1>
                 <div class="documentos__section flex-col">
-                <?php 
-                    $documentos = get_field('documentos', 'user_' . $current_user->ID);
-                    if( !empty($documentos['contrato']) ): ?>
-                        <a class="button" href="<?php echo $documentos['contrato']; ?>" target="_blank">
-                            <p class="file__description">Contrato</p> 
-                        </a>
-                    <?php else: ?>
-                        <p class="file__description disabled">Contrato</p>  
                     <?php
-                        endif;
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('documentos');
+                                if($counter == $index) {
+                                    if($subfield) {
+                                        if($subfield['contrato']) {
+                                            ?>
+                                            <a class="button" href="<?php echo $subfield['contrato']; ?>" target="_blank">
+                                                <p class="file__description">Contrato</p> 
+                                            </a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <p class="file__description disabled">Contrato</p> 
+                                            <?php
+                                        }
+                                    }                                         
+                                }
+                            }
+                        }
                     ?>
+
+
+
+
+
+
                 <?php 
                     $documentos = get_field('documentos', 'user_' . $current_user->ID);
                     if( !empty($documentos['declaracao']) ): ?>
