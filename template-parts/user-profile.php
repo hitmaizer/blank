@@ -189,15 +189,17 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                 $subfield = get_sub_field('proposta');
                                 if($counter == $index) {
                                     if($subfield) {
-                                        ?>
-                                        <a class="button" href="<?php echo $subfield['proposta_1']; ?>" target="_blank">
-                                            <p class="file__description">Proposta 1/3</p> 
-                                        </a>
-                                        <?php
-                                    } else {
-                                        ?>
-                                        <p class="file__description disabled">Proposta 1/3</p> 
-                                        <?php
+                                        if($subfield['proposta_1']) {
+                                            ?>
+                                            <a class="button" href="<?php echo $subfield['proposta_1']; ?>" target="_blank">
+                                                <p class="file__description">Proposta 1/3</p> 
+                                            </a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                                <p class="file__description disabled">Proposta 1/3</p>
+                                            <?php
+                                        }
                                     }
                                 }
                             }
@@ -266,16 +268,18 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                 $subfield = get_sub_field('proposta');
                                 if($counter == $index) {
                                     if($subfield) {
-                                        ?>
-                                        <a class="button" href="<?php echo $subfield['proposta_final']; ?>" target="_blank">
-                                            <p class="file__description">Proposta Final</p> 
-                                        </a>
-                                        <?php
-                                    } else {
-                                        ?>
-                                        <p class="file__description disabled">Proposta Final</p> 
-                                        <?php
-                                    }
+                                        if($subfield['proposta_final']) {
+                                            ?>
+                                            <a class="button" href="<?php echo $subfield['proposta_final']; ?>" target="_blank">
+                                                <p class="file__description">Proposta Final</p> 
+                                            </a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                                <p class="file__description disabled">Proposta Final</p>
+                                            <?php
+                                        }
+                                    } 
                                 }
                             }
                         }
