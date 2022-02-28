@@ -290,28 +290,62 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             <div class="ficheiros__container" id="ficheiros">
                 <h1 class="container__header">Ficheiros</h1>
                 <div class="ficheiros__section flex-col">
-                    <?php 
-                        $ficheiros = get_field('ficheiros', 'user_' . $current_user->ID);
-                        if( !empty($ficheiros['ficheiros_finais']) ): ?>
-                            <a class="button" href="<?php echo $ficheiros['ficheiros_finais']; ?>" target="_blank">
-                                <p class="file__description">Finais</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Finais</p>  
-                        <?php
-                            endif;
+                    <?php
+                            if (have_rows('projeto', "user_" . $current_user->ID)) {
+                                $counter = 0;
+                                while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                    the_row();
+                                    $counter++;
+                                    $subfield = get_sub_field('ficheiros');
+                                    if($counter == $index) {
+                                        if($subfield) {
+                                            if($subfield['ficheiros_finais']) {
+                                                ?>
+                                                <a class="button" href="<?php echo $subfield['ficheiros_finais']; ?>" target="_blank">
+                                                    <p class="file__description">Finais</p> 
+                                                </a>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <p class="file__description disabled">Finais</p> 
+                                                <?php
+                                            }
+                                        }                                         
+                                    }
+                                }
+                            }
                         ?>
-                    <?php 
-                        $ficheiros = get_field('ficheiros', 'user_' . $current_user->ID);
-                        if( !empty($ficheiros['ficheiros_execucao']) ): ?>
-                            <a class="button" href="<?php echo $ficheiros['ficheiros_execucao']; ?>" target="_blank">
-                                <p class="file__description">Em execução</p> 
-                            </a>
-                        <?php else: ?>
-                            <p class="file__description disabled">Em execução</p>  
-                        <?php
-                            endif;
+                    
+                    <?php
+                            if (have_rows('projeto', "user_" . $current_user->ID)) {
+                                $counter = 0;
+                                while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                    the_row();
+                                    $counter++;
+                                    $subfield = get_sub_field('ficheiros');
+                                    if($counter == $index) {
+                                        if($subfield) {
+                                            if($subfield['ficheiros_execucao']) {
+                                                ?>
+                                                <a class="button" href="<?php echo $subfield['ficheiros_execucao']; ?>" target="_blank">
+                                                    <p class="file__description">Em execução</p> 
+                                                </a>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <p class="file__description disabled">Em execução</p> 
+                                                <?php
+                                            }
+                                        }                                         
+                                    }
+                                }
+                            }
                         ?>
+
+
+
+
+                    
                 </div>
             </div>
             
