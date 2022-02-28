@@ -533,17 +533,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: white!important;
 }
 
 a:visited {
-	color: #800080;
+	color: inherit;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: #E0C794;
 }
 
 a:focus {
@@ -1288,6 +1288,12 @@ input#wp-submit.button.button-primary {
     top: 390px;
     left: 0;
 	background-color: #262626;
+	transition: all .2s ease-in-out;
+}
+
+input#wp-submit.button.button-primary:hover {
+	background-color: white;
+	color: #262626;
 }
 
 .projectspage__wrapper {
