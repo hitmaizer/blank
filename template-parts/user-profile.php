@@ -79,6 +79,26 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                     <img src="<?php echo get_template_directory_uri() ?>/assets/images/status3.png" alt="" class="status__img">
                                     <?php
                                     break;
+                                    case "proposta": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "ficheiros": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "documentos": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "financeiro": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                    <?php
+                                    break;
                                     case "final": 
                                         ?>
                                     <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
