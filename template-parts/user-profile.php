@@ -372,34 +372,56 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             }
                         }
                     ?>
-
-
-
-
-
-
-                <?php 
-                    $documentos = get_field('documentos', 'user_' . $current_user->ID);
-                    if( !empty($documentos['declaracao']) ): ?>
-                        <a class="button" href="<?php echo $documentos['declaracao']; ?>" target="_blank">
-                            <p class="file__description">Declaração</p> 
-                        </a>
-                    <?php else: ?>
-                        <p class="file__description disabled">Declaração</p>  
                     <?php
-                        endif;
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('documentos');
+                                if($counter == $index) {
+                                    if($subfield) {
+                                        if($subfield['declaracao']) {
+                                            ?>
+                                            <a class="button" href="<?php echo $subfield['declaracao']; ?>" target="_blank">
+                                                <p class="file__description">Declaração</p> 
+                                            </a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <p class="file__description disabled">Declaração</p> 
+                                            <?php
+                                        }
+                                    }                                         
+                                }
+                            }
+                        }
                     ?>
-                <?php 
-                    $documentos = get_field('documentos', 'user_' . $current_user->ID);
-                    if( !empty($documentos['cedencia_de_direitos']) ): ?>
-                        <a class="button" href="<?php echo $documentos['cedencia_de_direitos']; ?>" target="_blank">
-                            <p class="file__description">Cedência de direitos de imagem e voz</p> 
-                        </a>
-                    <?php else: ?>
-                        <p class="file__description disabled">Cedência de direitos de imagem e voz</p>  
                     <?php
-                        endif;
-                    ?>
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('documentos');
+                                if($counter == $index) {
+                                    if($subfield) {
+                                        if($subfield['cedencia_de_direitos']) {
+                                            ?>
+                                            <a class="button" href="<?php echo $subfield['cedencia_de_direitos']; ?>" target="_blank">
+                                                <p class="file__description">Cedência de direitos de imagem e voz</p> 
+                                            </a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <p class="file__description disabled">Cedência de direitos de imagem e voz</p> 
+                                            <?php
+                                        }
+                                    }                                         
+                                }
+                            }
+                        }
+                    ?>                
                 </div>
             </div>
             
