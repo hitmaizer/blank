@@ -717,6 +717,31 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             }
                         }
                     ?>
+                    <?php
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('all_files');
+                                if($counter == $index) {
+                                    if($subfield) {
+                                        if($subfield['execucao']) {
+                                            ?>
+                                            <a class="button" href="<?php echo $subfield['execucao']; ?>" target="_blank">
+                                                <p class="file__description">Execução</p> 
+                                            </a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <p class="file__description disabled">Execução</p> 
+                                            <?php
+                                        }
+                                    }                                         
+                                }
+                            }
+                        }
+                    ?>
 
                 </div>
             </div>
