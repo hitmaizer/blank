@@ -1243,6 +1243,13 @@ a {
 	margin-bottom: 40px;
 }
 
+.login__logo {
+	max-width: 100%;
+	object-fit: cover;
+	margin: 0 auto;
+	width: 250px;
+}
+
 p.login-username, p.login-password{
 	color: #E0C794;
 	font-weight: 800;
@@ -1267,7 +1274,7 @@ input#wp-submit.button.button-primary {
 	border: none;
 	height: 75px;
 	position: absolute;
-    top: 390px;
+    top: 580px;
     left: 0;
 	background-color: #262626;
 	transition: all .2s ease-in-out;
