@@ -1008,6 +1008,8 @@ a {
     gap: 32px;
     padding: 0;
 	max-width: 584px;
+	margin: 0;
+	width: 410px;
     
 }
 
@@ -1368,6 +1370,10 @@ p.file__description.disabled {
     letter-spacing: -0.025em;
     color: #262626;
     margin-bottom: 0;
+}
+
+.file__description:hover {
+	color: white;
 }
 
 .investimento__section {
