@@ -1046,20 +1046,6 @@ a {
 	color: white;
 }
 
-.list__item li::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 250ms ease-in;
-
-}
-
 .list__item li:hover::after {
     transform: scaleX(1);
     transform-origin: left;
