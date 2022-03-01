@@ -42,7 +42,31 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                         <li id="dados_btn">Os meus dados</li>
                     </div>
                     <div class="list__item flex-row" id="downloads_toggle" onclick="downloadsHandler()">
-                        <li id="all_btn">Descarregar todos os ficheiros</li>
+                        
+                            <?php 
+                                if(have_rows('projeto', "user_" . $current_user->ID)) {
+                                    $counter = 0;
+                                    while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                        the_row();
+                                        $counter++;
+                                        $subfield = get_sub_field('all_files');
+                                        if($counter == $index) {
+                                            if($subfield) {
+                                                ?>
+                                                    <li id="all_btn">
+                                                        <a href="<?php echo esc_url( $subfield ); ?>">Descarregar todos os ficheiros</a>
+                                                    </li>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                    <li class="list__item disabled">Descarregar todos os ficheiros</li>
+                                                <?php
+                                            }
+                                        } 
+                                    }
+                                }
+                            ?>
+                            
                     </div>
                 </div>
             </ul>
