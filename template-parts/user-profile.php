@@ -15,7 +15,27 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
     <div class="page__wrapper flex-row">
         <div class="page__sidebar flex-col">
             <ul class="sidebar__menu flex-col">
-                <h1 class="welcome__header">Olá, <?php echo $username ?></h1>
+                <div class="top__header">
+                    <h1 class="welcome__header">Olá, <?php echo $username ?></h1>
+                            <?php 
+                                if(have_rows('projeto', "user_" . $current_user->ID)) {
+                                    $counter = 0;
+                                    while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                        the_row();
+                                        $counter++;
+                                        $subfield = get_sub_field('nome_do_projeto');
+                                        if($counter == $index) {
+                                            if($subfield) {
+                                                ?>
+                                                  <h1 class="welcome__header subheader">Projecto: <?php echo $subfield ?></h1>  
+                                                <?php
+                                            } 
+                                        } 
+                                    }
+                                }
+                            ?>
+                    
+                </div>
                 <div class="sidebar__top flex-col">
                     <div class="list__item flex-row" id="status_toggle" onclick="statusHandler()">
                         <li  id="processo_btn" class="selected">Processo</li>
