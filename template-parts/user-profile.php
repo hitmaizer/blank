@@ -346,12 +346,12 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                             if($subfield['ficheiros_execucao']) {
                                                 ?>
                                                 <a class="button" href="<?php echo $subfield['ficheiros_execucao']; ?>" target="_blank">
-                                                    <p class="file__description">Em execução</p> 
+                                                    <p class="file__description">Execução</p> 
                                                 </a>
                                                 <?php
                                             } else {
                                                 ?>
-                                                <p class="file__description disabled">Em execução</p> 
+                                                <p class="file__description disabled">Execução</p> 
                                                 <?php
                                             }
                                         }                                         
