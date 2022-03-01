@@ -86,45 +86,41 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                               $subfield = get_sub_field('status');
                               if ($counter == $index) {
                                 switch($subfield) {
-                                    case "standart": 
+                                    case "diagnostico_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/status1.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                     <?php
                                     break;
-                                    case "processo": 
+                                    case "diagnostico_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/status2.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/2.png" alt="" class="status__img">
                                     <?php
                                     break;
-                                    case "investimento": 
+                                    case "diagnostico_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/status3.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/3.png" alt="" class="status__img">
                                     <?php
                                     break;
-                                    case "proposta": 
+                                    case "criacao_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                     <?php
                                     break;
-                                    case "ficheiros": 
+                                    case "criacao_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
                                     <?php
                                     break;
-                                    case "documentos": 
+                                    case "criacao_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/6.png" alt="" class="status__img">
                                     <?php
                                     break;
-                                    case "financeiro": 
+                                    case "execucao": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/7.png" alt="" class="status__img">
                                     <?php
                                     break;
-                                    case "final": 
-                                        ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/progressbar.png" alt="" class="status__img">
-                                    <?php
                                     break;
                                     default : 
                                         ?>
