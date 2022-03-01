@@ -211,3 +211,13 @@ function downloadsHandler() {
     }
 }
 
+function openMobMenu() {
+    const burger = document.querySelector('.navbar__webmenu');
+    const slider = document.querySelector('.page__sidebar');
+
+    burger.addEventListener('click', () => {
+        slider.classList.toggle('nav__active');
+    });
+}
+
+openMobMenu();
