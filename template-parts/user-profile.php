@@ -11,6 +11,12 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 ?>
 
 <!-- AQUI VAI O TEU HTML -->
+    <nav class="client__nav flex-row">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/logonav.png" alt="" class="nav__logo">
+        <button class="logout__btn">Sair</button>
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/navbar-menu-mob.png" alt="" class="navbar__webmenu">
+
+    </nav>
 
     <div class="page__wrapper flex-row">
         <div class="page__sidebar flex-col">
