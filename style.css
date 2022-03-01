@@ -1066,6 +1066,11 @@ a {
     
 }
 
+.welcome__header.subheader {
+	font-weight: 500;
+	margin-top: 0px;
+}
+
 .status__container, .investimento__container, 
 .proposta__container, .ficheiros__container,
 .documentos__container, .financeiro__container,
