@@ -59,7 +59,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
                 <div class="sidebar__bottom flex-col">
                     <div class="list__item flex-row" id="dados_toggle" onclick="dadosHandler()">
-                        <li id="dados_btn">Os meus dados</li>
+                        <li id="dados_btn">Dados do projeto</li>
                     </div>
                     <div class="list__item flex-row" id="downloads_toggle" onclick="downloadsHandler()">
                         
@@ -571,7 +571,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             </div>
 
             <div class="dados__container" id="dados">
-                <h1 class="container__header">Os meus dados</h1>
+                <h1 class="container__header">Dados do projeto</h1>
                 <div class="data__grid">
                     <div class="data__section empresa">
                     <h1 class="section__title">Dados da Empresa</h1>
