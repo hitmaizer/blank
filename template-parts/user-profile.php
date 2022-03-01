@@ -61,6 +61,11 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                     <div class="list__item flex-row" id="dados_toggle" onclick="dadosHandler()">
                         <li id="dados_btn">Dados do projeto</li>
                     </div>
+                    <div class="list__item flex-row">
+                        <a href="/wordpress/user-projects">
+                            <li class="projects__btn">Os meus projetos</li>
+                        </a>
+                    </div>
                     <div class="list__item flex-row" id="downloads_toggle" onclick="downloadsHandler()">
                         
                             <?php 
