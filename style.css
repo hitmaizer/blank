@@ -1466,6 +1466,34 @@ li.list__item.disabled {
 
 /* Media Queries */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
 	
   }
+@media only screen and (max-width: 992px) {
+	
+  }
+@media only screen and (max-width: 768px) {
+	.logout__btn {
+		display: none;
+	}
+	.page__sidebar {
+		display: none;
+	}
+	.navbar__webmenu {
+		display: block;
+	}
+  }
+@media only screen and (max-width: 576px) {
+	
+  }
+
+
+
+  /* 
+  Breakpoints
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+
+*/
