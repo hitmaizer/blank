@@ -1292,7 +1292,7 @@ a {
 	max-width: 100%;
 	object-fit: cover;
 	margin: 0 auto;
-	width: 250px;
+	width: 184px;
 }
 
 p.login-username, p.login-password{
@@ -1477,6 +1477,14 @@ li.list__item.disabled {
 	opacity: 0.9;
 }
 
+#all__downloads {
+	color: #E0C794!important;
+}
+
+#all__downloads:hover {
+	color: white!important;
+}
+
 
 
 /* Media Queries */
@@ -1495,9 +1503,7 @@ li.list__item.disabled {
 		display: block;
 		overflow: hidden;
 	}
-	.client__navbar {
-		
-	}
+	
 	.logout__btn {
 		display: none;
 	}

@@ -85,7 +85,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                             if($subfield) {
                                                 ?>
                                                     <li id="all_btn">
-                                                        <a href="<?php echo esc_url( $subfield ); ?>">Descarregar todos os ficheiros</a>
+                                                        <a id="all__downloads" href="<?php echo esc_url( $subfield ); ?>">Descarregar todos os ficheiros</a>
                                                     </li>
                                                 <?php
                                             } else {
