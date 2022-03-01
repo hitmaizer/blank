@@ -6,9 +6,10 @@
 
 <div class="loginpage__wrapper">
 
-    <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-maionese.png" alt="" class="login__logo">
+    
 
-    <div class="form__container">
+    <div class="form__container flex-col">
+    <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-maionese.png" alt="" class="login__logo">
     <h1 class="login__header">Área de cliente</h1>
     <?php
     if ( ! is_user_logged_in() ) { // Display WordPress login form:
