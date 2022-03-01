@@ -186,9 +186,6 @@ function dadosHandler() {
 }
 
 function downloadsHandler() {
-    const finalToggle = document.getElementById('downloads_toggle');
-    const finalDiv = document.getElementById('downloads');
-    const groupElements = document.querySelectorAll('.show');
     const actualBtn = document.getElementById('all_btn');
     const previousBtn = document.querySelectorAll('.selected');
 
@@ -198,17 +195,6 @@ function downloadsHandler() {
             e.classList.remove('selected');
         }
     });
-
-    if (finalToggle.classList.contains('show')) {
-        finalToggle.classList.remove('show');
-    } else {
-        groupElements.forEach((e) => {
-            if (e.classList.contains('show')) {
-                e.classList.remove('show');
-        }
-    });
-    finalDiv.classList.add('show');
-    }
 }
 
 function openMobMenu() {
