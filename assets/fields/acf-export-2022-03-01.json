@@ -55,14 +55,13 @@
                             "id": ""
                         },
                         "choices": {
-                            "standart": "Por Iniciar",
-                            "processo": "Processo",
-                            "investimento": "Investimento",
-                            "proposta": "Proposta",
-                            "ficheiros": "Ficheiros",
-                            "documentos": "Documentos",
-                            "financeiro": "Financeiro",
-                            "final": "Final"
+                            "diagnostico_1": "Diagnóstico - Venda",
+                            "diagnostico_2": "Diagnóstico - Gestão Interna",
+                            "diagnostico_3": "Diagnóstico - Envolvimento com Cliente",
+                            "criacao_1": "Criação - Conceitos e Formas",
+                            "criacao_2": "Criação - Desenvolvimento",
+                            "criacao_3": "Criação - Testes",
+                            "execucao": "Execução - Finalização"
                         },
                         "default_value": false,
                         "allow_null": 0,
@@ -160,7 +159,7 @@
                                     "class": "",
                                     "id": ""
                                 },
-                                "return_format": "array"
+                                "return_format": "url"
                             }
                         ]
                     },
@@ -800,9 +799,9 @@
                     },
                     {
                         "key": "field_621baee0b1485",
-                        "label": "All Files",
+                        "label": "Descarregar todos os ficheiros",
                         "name": "all_files",
-                        "type": "group",
+                        "type": "link",
                         "instructions": "",
                         "required": 0,
                         "conditional_logic": 0,
@@ -811,39 +810,7 @@
                             "class": "",
                             "id": ""
                         },
-                        "layout": "block",
-                        "sub_fields": [
-                            {
-                                "key": "field_621baeedb1486",
-                                "label": "Finais",
-                                "name": "finais",
-                                "type": "link",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "return_format": "url"
-                            },
-                            {
-                                "key": "field_621baef8b1487",
-                                "label": "Execução",
-                                "name": "execucao",
-                                "type": "link",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "return_format": "url"
-                            }
-                        ]
+                        "return_format": "url"
                     }
                 ]
             }
