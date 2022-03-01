@@ -1,6 +1,4 @@
-/* eslint-disable space-in-parens */
-/* eslint-disable no-unused-vars */
-/* eslint-disable linebreak-style */
+/* eslint-disable space-in-parens *//* eslint-disable no-unused-vars *//* eslint-disable linebreak-style */
 /* eslint-disable indent */
 
 function statusHandler() {

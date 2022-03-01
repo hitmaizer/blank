@@ -1501,9 +1501,7 @@ li.list__item.disabled {
 		display: block;
 		overflow: hidden;
 	}
-	.client__navbar {
-		
-	}
+	
 	.logout__btn {
 		display: none;
 	}
