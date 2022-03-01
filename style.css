@@ -1475,6 +1475,14 @@ li.list__item.disabled {
 	opacity: 0.9;
 }
 
+#all__downloads {
+	color: #E0C794!important;
+}
+
+#all__downloads:hover {
+	color: white!important;
+}
+
 
 
 /* Media Queries */
