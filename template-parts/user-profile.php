@@ -17,23 +17,23 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             <ul class="sidebar__menu flex-col">
                 <div class="top__header">
                     <h1 class="welcome__header">Olá, <?php echo $username ?></h1>
-                            <?php 
-                                if(have_rows('projeto', "user_" . $current_user->ID)) {
-                                    $counter = 0;
-                                    while(have_rows('projeto', "user_" . $current_user->ID)) {
-                                        the_row();
-                                        $counter++;
-                                        $subfield = get_sub_field('nome_do_projeto');
-                                        if($counter == $index) {
-                                            if($subfield) {
-                                                ?>
-                                                  <h1 class="welcome__header subheader">Projecto: <?php echo $subfield ?></h1>  
-                                                <?php
-                                            } 
+                        <?php 
+                            if(have_rows('projeto', "user_" . $current_user->ID)) {
+                                $counter = 0;
+                                while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                    the_row();
+                                    $counter++;
+                                    $subfield = get_sub_field('nome_do_projeto');
+                                    if($counter == $index) {
+                                        if($subfield) {
+                                            ?>
+                                                <h1 class="welcome__header subheader">Projecto: <?php echo $subfield ?></h1>  
+                                            <?php
                                         } 
-                                    }
+                                    } 
                                 }
-                            ?>
+                            }
+                        ?>
                     
                 </div>
                 <div class="sidebar__top flex-col">
