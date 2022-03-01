@@ -1012,6 +1012,7 @@ a {
 	position: fixed;
     width: 100%;
 	top: 0px;
+	z-index: 10;
 }
 
 .logout__btn {
@@ -1048,6 +1049,7 @@ a {
 	max-width: 584px;
 	margin: 0;
 	width: 410px;
+	z-index: 2;
     
 }
 
