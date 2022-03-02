@@ -1491,11 +1491,11 @@ li.list__item.disabled {
 
 @media only screen and (max-width: 1200px) {
 	
-  }
+}
 
 @media only screen and (max-width: 992px) {
 	
-  }
+}
 
 @media only screen and (max-width: 768px) {
 	.page__wrapper {
@@ -1513,16 +1513,33 @@ li.list__item.disabled {
 		height: 100%;
 		transform: translateY(-150%);
 		transition: transform 0.5s  ease-in;
+		background-color: white;
+		color: #262626;
 		
+	}
+	.list__item li.selected {
+		color: #4D4D4D;
+	}
+	.welcome__header, .list__item li {
+		color: #262626;
+	}
+	.list__item li:hover {
+		color: #4D4D4D;
 	}
 	.navbar__webmenu {
 		display: block;
 	}
-  }
+	.sidebar__top {
+		margin-top: 16px;
+	}
+	.sidebar__bottom {
+		margin-top: 32px;
+	}
+}
 
 @media only screen and (max-width: 576px) {
 	
-  }
+}
 
   .nav__active {
 	transform: translateY(0%);
