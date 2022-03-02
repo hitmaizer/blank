@@ -1518,6 +1518,12 @@ li.list__item.disabled {
 	.data__section {
 		max-width: 270px;
 	}
+	.menu__wrapper {
+		display: none;
+	}
+	.projects__title {
+		font-size: 2rem;
+	}
 }
 
 @media only screen and (max-width: 992px) {
@@ -1599,6 +1605,14 @@ li.list__item.disabled {
 	}
 	
 	li.list__item.disabled {
+		font-size: 0.9375rem;
+	}
+
+	.projects__title {
+		font-size: 1.9rem;
+	}
+
+	.placeholder__project {
 		font-size: 0.9375rem;
 	}
 }
