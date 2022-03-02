@@ -11,6 +11,16 @@ $rows = get_field("projeto", "user_" . $current_user->ID);
 ?>
 
 <!--  Projects HTML -----> 
+<nav class="client__nav flex-row">
+    <img src="<?php echo get_template_directory_uri() ?>/assets/images/logonav.png" alt="" class="nav__logo">
+    <button class="logout__btn" >
+        <a href="/wordpress/login">Sair</a> 
+    </button>
+    
+
+</nav>
+
+
 <div class="projectspage__wrapper">
     <div class="content__container flex-row">
         <div class="menu__wrapper">
