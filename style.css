@@ -1557,7 +1557,7 @@ li.list__item.disabled {
 	}
 
 	.process__grid {
-		justify-content: center;
+		margin-left: 85px;
 	}
 
 	.list__item li.selected {
