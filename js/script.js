@@ -7,6 +7,7 @@ function statusHandler() {
     const groupElements = document.querySelectorAll('.show');
     const actualBtn = document.getElementById('processo_btn');
     const previousBtn = document.querySelectorAll('.selected');
+    const nav = document.querySelector('.nav__active');
 
     actualBtn.classList.add('selected');
     previousBtn.forEach((e) => {
@@ -24,6 +25,7 @@ function statusHandler() {
     });
     statusDiv.classList.add('show');
     }
+    nav.classList.remove('nav__active');
 }
 
 function investimentoHandler() {
@@ -32,6 +34,7 @@ function investimentoHandler() {
     const groupElements = document.querySelectorAll('.show');
     const actualBtn = document.getElementById('investimento_btn');
     const previousBtn = document.querySelectorAll('.selected');
+    const nav = document.querySelector('.nav__active');
 
     actualBtn.classList.add('selected');
     previousBtn.forEach((e) => {
@@ -51,6 +54,7 @@ function investimentoHandler() {
     propostaDiv.classList.add('show');
     propostaToggle.classList.add('selected');
     }
+    nav.classList.remove('nav__active');
 }
 
 function propostaHandler() {
@@ -59,6 +63,7 @@ function propostaHandler() {
     const groupElements = document.querySelectorAll('.show');
     const actualBtn = document.getElementById('proposta_btn');
     const previousBtn = document.querySelectorAll('.selected');
+    const nav = document.querySelector('.nav__active');
 
     actualBtn.classList.add('selected');
     previousBtn.forEach((e) => {
@@ -77,6 +82,7 @@ function propostaHandler() {
     });
     orcamentoDiv.classList.add('show');
     }
+    nav.classList.remove('nav__active');
 }
 
 function ficheirosHandler() {
@@ -85,6 +91,7 @@ function ficheirosHandler() {
     const groupElements = document.querySelectorAll('.show');
     const actualBtn = document.getElementById('ficheiros_btn');
     const previousBtn = document.querySelectorAll('.selected');
+    const nav = document.querySelector('.nav__active');
 
     actualBtn.classList.add('selected');
     previousBtn.forEach((e) => {
@@ -103,6 +110,7 @@ function ficheirosHandler() {
     });
     fase1Div.classList.add('show');
     }
+    nav.classList.remove('nav__active');
 }
 
 function documentosHandler() {
@@ -111,6 +119,7 @@ function documentosHandler() {
     const groupElements = document.querySelectorAll('.show');
     const actualBtn = document.getElementById('documentos_btn');
     const previousBtn = document.querySelectorAll('.selected');
+    const nav = document.querySelector('.nav__active');
 
     actualBtn.classList.add('selected');
     previousBtn.forEach((e) => {
@@ -129,6 +138,7 @@ function documentosHandler() {
     });
     fase2Div.classList.add('show');
     }
+    nav.classList.remove('nav__active');
 }
 
 function financeiroHandler() {
@@ -137,6 +147,7 @@ function financeiroHandler() {
     const groupElements = document.querySelectorAll('.show');
     const actualBtn = document.getElementById('financeiro_btn');
     const previousBtn = document.querySelectorAll('.selected');
+    const nav = document.querySelector('.nav__active');
 
     actualBtn.classList.add('selected');
     previousBtn.forEach((e) => {
@@ -155,6 +166,7 @@ function financeiroHandler() {
     });
     fase3Div.classList.add('show');
     }
+    nav.classList.remove('nav__active');
 }
 
 function dadosHandler() {
@@ -163,6 +175,7 @@ function dadosHandler() {
     const groupElements = document.querySelectorAll('.show');
     const actualBtn = document.getElementById('dados_btn');
     const previousBtn = document.querySelectorAll('.selected');
+    const nav = document.querySelector('.nav__active');
 
     actualBtn.classList.add('selected');
     previousBtn.forEach((e) => {
@@ -181,11 +194,13 @@ function dadosHandler() {
     });
     finalDiv.classList.add('show');
     }
+    nav.classList.remove('nav__active');
 }
 
 function downloadsHandler() {
     const actualBtn = document.getElementById('all_btn');
     const previousBtn = document.querySelectorAll('.selected');
+    const nav = document.querySelector('.nav__active');
 
     actualBtn.classList.add('selected');
     previousBtn.forEach((e) => {
@@ -193,6 +208,7 @@ function downloadsHandler() {
             e.classList.remove('selected');
         }
     });
+    nav.classList.remove('nav__active');
 }
 
 function openMobMenu() {
@@ -205,3 +221,5 @@ function openMobMenu() {
 }
 
 openMobMenu();
+
+
