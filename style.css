@@ -1452,6 +1452,7 @@ p.file__description.disabled {
 	color: #262626;
 	margin: 0;
 	margin-bottom: 8px;
+	max-width: 230px;
 }
 
 
@@ -1516,7 +1517,8 @@ li.list__item.disabled {
 		margin-top: 16px;
 	}
 	.data__section {
-		max-width: 270px;
+		min-width: 308px;
+    	margin: 0 auto;
 	}
 	.menu__wrapper {
 		display: none;
