@@ -990,7 +990,7 @@ a {
 	padding: 64px;
     background-color: #DFC693;
 	min-height: 100vh;
-	margin-top: 135px;
+	
 }
 
 .flex-col {
@@ -1009,10 +1009,10 @@ a {
 	height: 135px;
 	padding: 48px 64px;
 	background-color: #fff;
-	position: fixed;
+	position: sticky;
     width: 100%;
 	top: 0px;
-	z-index: 10;
+	z-index: 11;
 }
 
 .logout__btn {
@@ -1049,7 +1049,7 @@ a {
 	max-width: 584px;
 	margin: 0;
 	width: 410px;
-	z-index: 8;
+	
     
 }
 
@@ -1574,16 +1574,27 @@ li.list__item.disabled {
 		text-align: center;
 		margin: 0 auto;
 	}
+	.show {
+		margin-top: 32px;
+	}
 }
 
 @media only screen and (max-width: 576px) {
-	.process__grid {
-		justify-content: flex-start;
+	.welcome__header {
+		font-size: 0.9375rem;
+	}
+	.list__item li {
+		font-size: 0.9375rem;
+	}
+	
+	li.list__item.disabled {
+		font-size: 0.9375rem;
 	}
 }
 
   .nav__active {
 	transform: translateY(0%);
+	z-index: 10;
 }
 
 
