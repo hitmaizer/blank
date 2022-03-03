@@ -1496,11 +1496,15 @@ li.list__item.disabled {
 }
 
 .footer__dados {
-  margin-top: 32px;
+  margin-top: 64px;
 }
 
 a#mailto__dados {
   color: #262626 !important;
+}
+
+a#mailto__dados:hover {
+  color: white !important;
 }
 
 /* Media Queries */
@@ -1631,6 +1635,9 @@ a#mailto__dados {
     gap: 64px;
   }
   .data__grid {
+    margin-left: 10%;
+  }
+  .footer__dados {
     margin-left: 10%;
   }
 }
