@@ -753,10 +753,10 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
         </div>
     </div>
-    <div class="footer__client flex-row">
+    <div class="bottom__client flex-row">
         <div class="footer__section">
             <img src="" alt="" class="footer__logo">
-            <p class="footer_logotext">© 2022 Maionese Design
+            <p class="footer__logotext">© 2022 Maionese Design
                 Todos os direitos reservados</p>
         </div>
         <div class="footer__section">
