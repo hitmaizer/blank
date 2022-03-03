@@ -762,11 +762,11 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
         <div class="footer__section flex-col">
             <h3 class="footer__title">Contactos</h3>
             <div class="contactos__wrapper flex-col">
-                <a href="" class="footer__link">geral@maionesedesign.pt</a>
-                <a href="" class="footer__link">913 023 001</a>
-                <a href="" class="footer__link">
-                    <p class="">Rua Alfredo Pereira 190</p> 
-                    <p class="">4560-502 Penafiel</p> 
+                <a href="mailto:geral@maionesedesign.pt" class="footer__link">geral@maionesedesign.pt</a>
+                <a href="tel:+351913023001" class="footer__link">913 023 001</a>
+                <a href="https://goo.gl/maps/9vCMb8ZRRBrDRTNS6" class="footer__link">
+                    <p class="footer__morada">Rua Alfredo Pereira 190</p> 
+                    <p class="footer__morada">4560-502 Penafiel</p> 
                 </a>
             </div>
         </div>
