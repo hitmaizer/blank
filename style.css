@@ -977,6 +977,46 @@ header#masthead.site-header {
   font-family: "Montserrat", sans-serif;
 }
 
+h3 {
+  font-family: "futura-pt-bold", sans-serif !important;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.2em;
+  letter-spacing: -0.04em;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+h4 {
+  font-family: "futura-pt-bold", sans-serif !important;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 1.22em;
+  letter-spacing: -0.04em;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-family: "futura-pt-bold", sans-serif !important;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.26em;
+  letter-spacing: -0.04em;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+h5 {
+  font-family: "futura-pt-bold", sans-serif !important;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -1694,7 +1734,7 @@ a#mailto__dados:hover {
 
 .footer__section {
   min-width: 252px;
-  min-height: 250px;
+  min-height: 320px;
 }
 
 .footer__title {
@@ -1711,7 +1751,7 @@ a#mailto__dados:hover {
 .footer__link {
   font-size: 17px;
   line-height: 21px;
-  font-weight: 600;
+  font-weight: 400;
   /* identical to box height */
   letter-spacing: -0.01em;
   margin: 0;
