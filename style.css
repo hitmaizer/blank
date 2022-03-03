@@ -1057,11 +1057,11 @@ a {
 
 .sidebar__top {
   gap: 8px;
-  margin-top: 80px;
+  margin-top: 48px;
 }
 
 .sidebar__bottom {
-  margin-top: 100px;
+  margin-top: 64px;
   gap: 8px;
 }
 
@@ -1506,6 +1506,11 @@ a#mailto__dados {
 
 a#mailto__dados:hover {
   color: white !important;
+}
+
+.nav__logo {
+  max-width: 100%;
+  width: 50px;
 }
 
 /* Media Queries */
