@@ -1021,6 +1021,17 @@ a {
   font-weight: 800;
 }
 
+.logout__btn--projects {
+  border: none;
+  padding: 1rem 2rem;
+  background-color: #262626;
+  color: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
 .navbar__webmenu {
   display: none;
   cursor: pointer;
@@ -1321,7 +1332,7 @@ input#wp-submit.button.button-primary:hover {
   background-color: #262626;
   color: #e0c794;
   min-width: 600px;
-  min-height: 560px;
+  min-height: 450px;
 }
 
 .menu__header {
@@ -1334,15 +1345,18 @@ input#wp-submit.button.button-primary:hover {
 
 .projects__title {
   font-weight: 900;
-  font-size: 74px;
+  font-size: 44px;
   line-height: 130.9%;
   letter-spacing: 0.02em;
   color: #262626;
   margin: 0;
 }
 
+.content__wrapper {
+  justify-content: space-between;
+}
+
 .projects__wrapper {
-  margin-top: 130px;
   gap: 12px;
 }
 
@@ -1501,9 +1515,7 @@ li.list__item.disabled {
     min-width: 308px;
     margin: 0 auto;
   }
-  .menu__wrapper {
-    display: none;
-  }
+
   .projects__title {
     font-size: 2rem;
   }
@@ -1578,6 +1590,9 @@ li.list__item.disabled {
   .sair__btn {
     display: inline-block;
   }
+  .menu__wrapper {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -1593,7 +1608,7 @@ li.list__item.disabled {
   }
 
   .projects__title {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .placeholder__project {
@@ -1611,6 +1626,9 @@ li.list__item.disabled {
   }
   .documentos__section {
     gap: 16px;
+  }
+  .content__wrapper {
+    gap: 64px;
   }
 }
 
