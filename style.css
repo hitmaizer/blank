@@ -1678,6 +1678,19 @@ a#mailto__dados:hover {
   z-index: 10;
 }
 
+.bottom__client {
+  background-color: #262626;
+  color: white;
+  min-height: 456px;
+}
+
+.footer__logotext,
+.footer__link {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+}
+
 /* 
   Breakpoints
   xs: 576px,
