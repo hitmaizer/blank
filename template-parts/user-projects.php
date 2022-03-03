@@ -13,7 +13,7 @@ $rows = get_field("projeto", "user_" . $current_user->ID);
 <!--  Projects HTML -----> 
 <nav class="client__nav flex-row">
     <img src="<?php echo get_template_directory_uri() ?>/assets/images/logonav.png" alt="" class="nav__logo">
-    <button class="logout__btn" >
+    <button class="logout__btn--projects" >
         <a href="/wordpress/login">Sair</a> 
     </button>
     
@@ -26,8 +26,8 @@ $rows = get_field("projeto", "user_" . $current_user->ID);
         <div class="menu__wrapper">
             <h6 class="menu__header">Olá, <?php echo $username ?></h6>
         </div>
-        <div class="content__wrapper">
-            <h1 class="projects__title">Bem-vindo, esta é a sua área. Escolha e aceda a todo o conteudo do projeto</h1>
+        <div class="content__wrapper flex-col">
+            <h1 class="projects__title">Bem-vindo, escolha o seu projeto.</h1>
             <div class="projects__wrapper flex-col">        
                 <?php 
                 if($rows){
