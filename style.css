@@ -1688,34 +1688,54 @@ a#mailto__dados:hover {
   color: white;
   min-height: 456px;
   align-items: center;
-  gap: 172px;
+  gap: 157px;
   padding-left: 5%;
+}
+
+.footer__section {
+  min-width: 252px;
+  min-height: 250px;
+}
+
+.footer__title {
+  margin-bottom: 58px;
 }
 
 .footer__logo {
   max-width: 100%;
   width: 94px;
+  margin-bottom: 29px;
 }
 
 .footer__logotext,
 .footer__link {
-  font-weight: 600;
   font-size: 17px;
   line-height: 21px;
+  font-weight: 600;
+  /* identical to box height */
+  letter-spacing: -0.01em;
   margin: 0;
   padding: 0;
 }
 
 .social__links {
   align-items: baseline;
-  justify-content: center;
   gap: 16px;
-  margin-top: 58px;
+}
+
+.footer__morada {
+  margin: 0;
+  padding: 0;
+}
+
+.contactos__wrapper {
+  gap: 29px;
 }
 
 .social__icon {
   width: 20px;
   height: 20px;
+  max-width: 100%;
 }
 
 /* 
