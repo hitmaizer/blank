@@ -12,7 +12,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
 <!-- AQUI VAI O TEU HTML -->
     <nav class="client__nav flex-row">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/logonav.png" alt="" class="nav__logo">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-nav.png" alt="" class="nav__logo">
         <button class="logout__btn" >
             <a href="/wordpress/login">Sair</a> 
         </button>
@@ -755,7 +755,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
     </div>
     <div class="bottom__client flex-row">
         <div class="footer__section">
-            <img src="" alt="" class="footer__logo">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-footer.png" alt="" class="footer__logo">
             <p class="footer__logotext">© 2022 Maionese Design
                 Todos os direitos reservados</p>
         </div>
@@ -769,10 +769,18 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
         <div class="footer__section">
             <h3 class="footer__title">Social</h3>
             <div class="social__links flex-row">
-                <img src="" alt="" class="social__icon">
-                <img src="" alt="" class="social__icon">
-                <img src="" alt="" class="social__icon">
-                <img src="" alt="" class="social__icon">              
+                <a href="https://www.instagram.com/maionesedesign.pt/" class="social__link" target="_blank">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/instagram.png" alt="" class="social__icon">
+                </a>
+                <a href="https://www.linkedin.com/company/maionesedesign/" class="social__link" target="_blank">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/linkedin.png" alt="" class="social__icon">
+                </a>
+                <a href="https://www.behance.net/maionesedesign" class="social__link" target="_blank">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/behance.png" alt="" class="social__icon">
+                </a>
+                <a href="https://www.youtube.com/channel/UCmZ2AHM-8yFck9zDqTQ6b7A" class="social__link" target="_blank">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/youtube.png" alt="" class="social__icon">              
+                </a>
             </div>
         </div>
     </div>
