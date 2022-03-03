@@ -1143,6 +1143,7 @@ a {
 
 .dados__block {
   justify-content: space-between;
+  height: 100%;
 }
 
 .show {
@@ -1496,7 +1497,7 @@ li.list__item.disabled {
 }
 
 .footer__dados {
-  margin-top: 64px;
+  margin-top: 16px;
 }
 
 a#mailto__dados {
