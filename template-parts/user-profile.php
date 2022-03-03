@@ -101,6 +101,9 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             ?>
                             
                     </div>
+                    <div class="sair__btn">
+                        <p class="list__item">Sair</p>
+                    </div>
                 </div>
             </ul>
         </div>
