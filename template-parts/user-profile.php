@@ -754,19 +754,19 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
         </div>
     </div>
     <div class="bottom__client flex-row">
-        <div class="footer__section">
+        <div class="footer__section flex-col">
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-footer.png" alt="" class="footer__logo">
-            <p class="footer__logotext">© 2022 Maionese Design
-                Todos os direitos reservados</p>
+            <p class="footer__logotext">© 2022 Maionese Design</p>
+            <p class="footer__logotext">Todos os direitos reservados</p>
         </div>
-        <div class="footer__section">
+        <div class="footer__section flex-col">
             <h3 class="footer__title">Contatos</h3>
             <a href="" class="footer__link">geral@maionesedesign.pt</a>
             <a href="" class="footer__link">913 023 001</a>
             <a href="" class="footer__link">Rua Alfredo Pereira 190
                 4560-502 Penafiel</a>
         </div>
-        <div class="footer__section">
+        <div class="footer__section flex-col">
             <h3 class="footer__title">Social</h3>
             <div class="social__links flex-row">
                 <a href="https://www.instagram.com/maionesedesign.pt/" class="social__link" target="_blank">
