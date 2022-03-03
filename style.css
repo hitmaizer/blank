@@ -1687,6 +1687,13 @@ a#mailto__dados:hover {
   background-color: #262626;
   color: white;
   min-height: 456px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo {
+  max-width: 100%;
+  width: 94px;
 }
 
 .footer__logotext,
@@ -1694,6 +1701,8 @@ a#mailto__dados:hover {
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
 }
 
 /* 
