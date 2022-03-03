@@ -753,11 +753,33 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
         </div>
     </div>
-    
+    <div class="footer__client flex-row">
+        <div class="footer__section">
+            <img src="" alt="" class="footer__logo">
+            <p class="footer_logotext">© 2022 Maionese Design
+                Todos os direitos reservados</p>
+        </div>
+        <div class="footer__section">
+            <h3 class="footer__title">Contatos</h3>
+            <a href="" class="footer__link">geral@maionesedesign.pt</a>
+            <a href="" class="footer__link">913 023 001</a>
+            <a href="" class="footer__link">Rua Alfredo Pereira 190
+                4560-502 Penafiel</a>
+        </div>
+        <div class="footer__section">
+            <h3 class="footer__title">Social</h3>
+            <div class="social__links flex-row">
+                <img src="" alt="" class="social__icon">
+                <img src="" alt="" class="social__icon">
+                <img src="" alt="" class="social__icon">
+                <img src="" alt="" class="social__icon">              
+            </div>
+        </div>
+    </div>
 
 
 
 <?php
-    get_footer();
+    //get_footer();
 ?>
 
