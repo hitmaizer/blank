@@ -102,7 +102,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             
                     </div>
                     <div class="sair__btn">
-                        <p class="list__item">Sair</p>
+                        <p class="list__item"> <a href="/wordpress/login">Sair</a></p>
                     </div>
                 </div>
             </ul>
