@@ -1687,8 +1687,9 @@ a#mailto__dados:hover {
   background-color: #262626;
   color: white;
   min-height: 456px;
-  justify-content: center;
   align-items: center;
+  gap: 172px;
+  padding-left: 5%;
 }
 
 .footer__logo {
@@ -1703,6 +1704,18 @@ a#mailto__dados:hover {
   line-height: 21px;
   margin: 0;
   padding: 0;
+}
+
+.social__links {
+  align-items: baseline;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 58px;
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* 
