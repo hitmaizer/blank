@@ -624,6 +624,40 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                         ?>
                     </div>
 
+                    <div class="data__section representante">
+                        <h1 class="section__title">Dados do Representante</h1>
+                        <?php 
+                            if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while (have_rows('projeto', "user_" . $current_user->ID)) {
+                                the_row();
+                                $counter++;
+                                $subfield = get_sub_field('dados_representante');
+                                if ($counter == $index) {
+                                ?>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Nome:</h6>
+                                        <p class="field__text"><?php echo $subfield['nome_representante']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Telemóvel:</h6>
+                                        <p class="field__text"><?php echo $subfield['telemovel_representante']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Endereço eletrónico:</h6>
+                                        <p class="field__text"><?php echo $subfield['endereco_eletronico_representante']; ?></p>
+                                    </div>
+                                    <div class="section__field flex-row">
+                                        <h6 class="field__label">Data de nascimento:</h6>
+                                        <p class="field__text"><?php echo $subfield['data_de_nascimento_representante']; ?></p>
+                                    </div>
+                                <?php        
+                                } 
+                            }
+                        }
+                    ?>
+                    </div>
+
                     <div class="data__section empresa">
                     <h1 class="section__title">Dados da Empresa</h1>
                     <?php 
@@ -667,39 +701,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
                     </div>
                     
-                    <div class="data__section representante">
-                        <h1 class="section__title">Dados do Representante</h1>
-                        <?php 
-                            if (have_rows('projeto', "user_" . $current_user->ID)) {
-                            $counter = 0;
-                            while (have_rows('projeto', "user_" . $current_user->ID)) {
-                                the_row();
-                                $counter++;
-                                $subfield = get_sub_field('dados_representante');
-                                if ($counter == $index) {
-                                ?>
-                                    <div class="section__field flex-row">
-                                        <h6 class="field__label">Nome:</h6>
-                                        <p class="field__text"><?php echo $subfield['nome_representante']; ?></p>
-                                    </div>
-                                    <div class="section__field flex-row">
-                                        <h6 class="field__label">Telemóvel:</h6>
-                                        <p class="field__text"><?php echo $subfield['telemovel_representante']; ?></p>
-                                    </div>
-                                    <div class="section__field flex-row">
-                                        <h6 class="field__label">Endereço eletrónico:</h6>
-                                        <p class="field__text"><?php echo $subfield['endereco_eletronico_representante']; ?></p>
-                                    </div>
-                                    <div class="section__field flex-row">
-                                        <h6 class="field__label">Data de nascimento:</h6>
-                                        <p class="field__text"><?php echo $subfield['data_de_nascimento_representante']; ?></p>
-                                    </div>
-                                <?php        
-                                } 
-                            }
-                        }
-                    ?>
-                    </div>
+                    
                     <div class="data__section faturacao">
                         <h1 class="section__title">Dados da Faturação</h1>
 
