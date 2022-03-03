@@ -1144,6 +1144,7 @@ a {
 .welcome__header.subheader {
   font-weight: 500;
   margin-top: 0px;
+  font-size: 18px;
 }
 
 .status__container,
@@ -1534,10 +1535,6 @@ li.list__item.disabled {
   font-weight: 800;
   line-height: 130.9%;
   transition: all 0.1s ease;
-}
-
-.footer__dados {
-  margin-top: 16px;
 }
 
 a#mailto__dados {
