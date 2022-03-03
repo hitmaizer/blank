@@ -35,7 +35,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                     if($counter == $index) {
                                         if($subfield) {
                                             ?>
-                                                <h1 class="welcome__header subheader">Projecto: <?php echo $subfield ?></h1>  
+                                                <h6 class="welcome__header subheader">Projecto: <?php echo $subfield ?></h6>  
                                             <?php
                                         } 
                                     } 
