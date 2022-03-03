@@ -1331,7 +1331,7 @@ input#wp-submit.button.button-primary:hover {
 .menu__wrapper {
   background-color: #262626;
   color: #e0c794;
-  min-width: 600px;
+  min-width: 370px;
   min-height: 450px;
 }
 
@@ -1368,6 +1368,10 @@ input#wp-submit.button.button-primary:hover {
   margin: 0;
   cursor: pointer;
   display: inline-block;
+}
+
+.placeholder__project:hover {
+  color: white;
 }
 
 .propostas__container {
@@ -1593,6 +1597,9 @@ li.list__item.disabled {
   .menu__wrapper {
     display: none;
   }
+  .content__wrapper {
+    gap: 64px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -1626,9 +1633,6 @@ li.list__item.disabled {
   }
   .documentos__section {
     gap: 16px;
-  }
-  .content__wrapper {
-    gap: 64px;
   }
 }
 
