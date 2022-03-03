@@ -1117,6 +1117,10 @@ a {
   display: none;
 }
 
+.dados__container {
+  justify-content: space-between;
+}
+
 .list__item li.selected {
   color: white;
 }
@@ -1135,6 +1139,10 @@ a {
 
 .status__img {
   margin-top: 32px;
+}
+
+.dados__block {
+  justify-content: space-between;
 }
 
 .show {
@@ -1485,6 +1493,14 @@ li.list__item.disabled {
   font-weight: 800;
   line-height: 130.9%;
   transition: all 0.1s ease;
+}
+
+.footer__dados {
+  margin-top: 32px;
+}
+
+a#mailto__dados {
+  color: #262626 !important;
 }
 
 /* Media Queries */
