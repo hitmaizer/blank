@@ -1510,10 +1510,22 @@ li.list__item.disabled {
     margin-top: 4px;
   }
   .data__grid {
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
     gap: 32px;
     margin-top: 16px;
+  }
+  .projeto {
+    order: 1;
+  }
+  .empresa {
+    order: 2;
+  }
+  .representante {
+    order: 3;
+  }
+  .faturacao {
+    order: 4;
   }
   .data__section {
     min-width: 308px;
