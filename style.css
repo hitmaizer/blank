@@ -1529,7 +1529,6 @@ li.list__item.disabled {
   }
   .data__section {
     min-width: 308px;
-    margin: 0 auto;
   }
 
   .projects__title {
@@ -1538,6 +1537,9 @@ li.list__item.disabled {
 }
 
 @media only screen and (max-width: 992px) {
+  .container__header {
+    font-size: 2.75rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1612,6 +1614,9 @@ li.list__item.disabled {
   .content__wrapper {
     gap: 64px;
   }
+  .data__grid {
+    margin-left: 10%;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -1634,10 +1639,6 @@ li.list__item.disabled {
     font-size: 0.9375rem;
   }
 
-  .container__header {
-    font-size: 2rem;
-    margin-left: 20%;
-  }
   .file__description {
     margin-left: 20%;
     max-width: 300px;
