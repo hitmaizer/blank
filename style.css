@@ -1627,6 +1627,12 @@ p.field__text.footer__dados {
   color: white;
 }
 
+.info__list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 1370px) {
   .grid__bottom {
