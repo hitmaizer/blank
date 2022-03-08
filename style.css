@@ -1372,11 +1372,11 @@ input#wp-submit.button.button-primary:hover {
 .projectspage__wrapper {
   background-color: #e0c794;
   min-height: 100vh;
-  padding: 64px;
 }
 
 .content__container {
   gap: 40px;
+  min-height: 80vh;
 }
 
 .menu__wrapper {
