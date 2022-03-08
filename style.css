@@ -1648,7 +1648,7 @@ p.field__text.footer__dados {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1446px) {
   .grid__bottom {
     flex-direction: column;
     position: absolute;
@@ -1816,8 +1816,12 @@ p.field__text.footer__dados {
   }
 
   .grid__bottom {
-    top: 52%;
-    left: 20%;
+    top: 62%;
+    left: 25%;
+  }
+
+  .barras__grid {
+    margin-left: 16%;
   }
 }
 
@@ -1860,7 +1864,7 @@ p.field__text.footer__dados {
   }
 
   .grid__bottom {
-    left: 30%;
+    left: 25%;
   }
 }
 
