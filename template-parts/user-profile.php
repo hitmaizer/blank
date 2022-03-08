@@ -76,6 +76,33 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             <li class="projects__btn">Os meus projetos</li>
                         </a>
                     </div>
+                    <div class="list__item" id="upload_toggle" onclick="uploadHandler()">
+                    
+                    <?php 
+                                if(have_rows('projeto', "user_" . $current_user->ID)) {
+                                    $counter = 0;
+                                    while(have_rows('projeto', "user_" . $current_user->ID)) {
+                                        the_row();
+                                        $counter++;
+                                        $subfield = get_sub_field('carregar_ficheiros');
+                                        if($counter == $index) {
+                                            if($subfield) {
+                                                ?>
+                                                    <li id="all_btn">
+                                                        <a id="upload_btn" href="<?php echo esc_url( $subfield ); ?>">Carregar Ficheiros</a>
+                                                    </li>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                    <li class="list__item disabled">Carregar Ficheiros</li>
+                                                <?php
+                                            }
+                                        } 
+                                    }
+                                }
+                            ?>
+                    </div>
+
                     <div class="list__item flex-row" id="downloads_toggle" onclick="downloadsHandler()">
                         
                             <?php 
