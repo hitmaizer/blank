@@ -140,9 +140,9 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
             <div class="status__container container show" id="status">
                 <h1 class="container__header status__header">Processo</h1>
-                
-                    
-                        <?php 
+                <div class="barras__grid">
+                    <div class="barra__item">
+                    <?php 
                         if (have_rows('projeto', "user_" . $current_user->ID)) {
                             $counter = 0;
                             while (have_rows('projeto', "user_" . $current_user->ID)) {
@@ -153,17 +153,17 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                 switch($subfield) {
                                     case "diagnostico_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/2.png" alt="" class="status__img">
                                     <?php
                                     break;
                                     case "diagnostico_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/2.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/3.png" alt="" class="status__img">
                                     <?php
                                     break;
                                     case "diagnostico_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/3.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                     <?php
                                     break;
                                     case "criacao_1": 
@@ -173,17 +173,17 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                     break;
                                     case "criacao_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                     <?php
                                     break;
                                     case "criacao_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/6.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                     <?php
                                     break;
                                     case "execucao": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/7.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                     <?php
                                     break;
                                     break;
@@ -198,6 +198,128 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                           }
                         
                         ?>
+                    </div>
+                    <div class="barra__item">
+                    <?php 
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while (have_rows('projeto', "user_" . $current_user->ID)) {
+                              the_row();
+                              $counter++;
+                              $subfield = get_sub_field('status');
+                              if ($counter == $index) {
+                                switch($subfield) {
+                                    case "diagnostico_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "diagnostico_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "diagnostico_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "criacao_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/2.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "criacao_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/3.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "criacao_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "execucao": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    break;
+                                    default : 
+                                        ?>
+                                    <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                    <?php
+                                    break;
+                                }
+                              }
+                            }
+                          }
+                        
+                        ?>
+                    </div>
+                    <div class="barra__item">
+                    <?php 
+                        if (have_rows('projeto', "user_" . $current_user->ID)) {
+                            $counter = 0;
+                            while (have_rows('projeto', "user_" . $current_user->ID)) {
+                              the_row();
+                              $counter++;
+                              $subfield = get_sub_field('status');
+                              if ($counter == $index) {
+                                switch($subfield) {
+                                    case "diagnostico_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "diagnostico_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "diagnostico_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "criacao_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "criacao_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "criacao_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "execucao": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/6.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    break;
+                                    default : 
+                                        ?>
+                                    <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                    <?php
+                                    break;
+                                }
+                              }
+                            }
+                          }
+                        
+                        ?>
+                    </div>
+
+                </div>
+                
+                    
+                        
                     
                     <div class="grid__bottom flex-row">
                         <div class="bottom__item item--1">
