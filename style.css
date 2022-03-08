@@ -1705,10 +1705,6 @@ a#mailto__dados:hover {
     color: #262626;
   }
 
-  .process__grid {
-    margin-left: 85px;
-  }
-
   .list__item li.selected {
     color: #4d4d4d;
   }
@@ -1729,7 +1725,7 @@ a#mailto__dados:hover {
     margin-top: 32px;
   }
   .status__img {
-    width: 568px;
+    margin-left: 13%;
   }
   .container__header {
     font-size: 2.75rem;
@@ -1763,6 +1759,11 @@ a#mailto__dados:hover {
   .content__wrapper {
     justify-content: flex-start;
     padding: 32px;
+  }
+
+  .grid__bottom {
+    top: 52%;
+    left: 20%;
   }
 }
 
