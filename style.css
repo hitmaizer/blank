@@ -533,9 +533,6 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
-  color: white !important;
-}
 
 a:visited {
   color: inherit;
@@ -1620,6 +1617,14 @@ a#mailto__dados:hover {
 
 p.field__text.footer__dados {
   margin-top: 64px;
+}
+
+#upload_btn {
+  color: #e0c794;
+}
+
+#upload_btn:hover {
+  color: white;
 }
 
 /* Media Queries */
