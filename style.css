@@ -1391,12 +1391,13 @@ input#wp-submit.button.button-primary:hover {
   font-size: 26px;
   line-height: 130.9%;
   letter-spacing: -0.005em;
-  padding: 16px 40px;
+  padding-left: 40px;
+  margin-top: 32px;
 }
 
 .projects__title {
   font-weight: 900;
-  font-size: 44px;
+  font-size: 74px;
   line-height: 130.9%;
   letter-spacing: 0.02em;
   color: #262626;
@@ -1404,7 +1405,8 @@ input#wp-submit.button.button-primary:hover {
 }
 
 .content__wrapper {
-  justify-content: space-between;
+  gap: 64px;
+  margin-top: 32px;
 }
 
 .projects__wrapper {
@@ -1554,7 +1556,7 @@ a#mailto__dados:hover {
 .bottom__client {
   background-color: #262626;
   color: white;
-  min-height: 456px;
+  padding: 64px 32px;
   align-items: center;
   gap: 157px;
   padding-left: 5%;
@@ -1578,7 +1580,7 @@ a#mailto__dados:hover {
 .footer__logotext,
 .footer__link {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 130.9%;
   letter-spacing: -0.01em;
 
@@ -1659,7 +1661,10 @@ a#mailto__dados:hover {
   }
 
   .projects__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  .placeholder__project {
+    font-size: 20px;
   }
 }
 
@@ -1752,6 +1757,11 @@ a#mailto__dados:hover {
   .footer__dados {
     margin-left: 10%;
   }
+
+  .content__wrapper {
+    justify-content: flex-start;
+    padding: 32px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -1764,10 +1774,6 @@ a#mailto__dados:hover {
 
   li.list__item.disabled {
     font-size: 0.9375rem;
-  }
-
-  .projects__title {
-    font-size: 2rem;
   }
 
   .placeholder__project {
