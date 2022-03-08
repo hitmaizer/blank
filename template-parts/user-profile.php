@@ -12,7 +12,9 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
 <!-- AQUI VAI O TEU HTML -->
     <nav class="client__nav flex-row">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-nav.png" alt="" class="nav__logo">
+        <a href="http://maionesedesign.pt" class="log__link">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-nav.png" alt="" class="nav__logo">
+        </a>
         <button class="logout__btn" >
             <a href="/wordpress/login">Sair</a> 
         </button>
