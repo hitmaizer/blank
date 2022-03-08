@@ -1184,7 +1184,6 @@ a {
 
 .dados__block {
   justify-content: space-between;
-  height: 100%;
 }
 
 .show {
@@ -1616,6 +1615,10 @@ a#mailto__dados:hover {
 
 .page {
   margin: 0;
+}
+
+p.field__text.footer__dados {
+  margin-top: 64px;
 }
 
 /* Media Queries */
