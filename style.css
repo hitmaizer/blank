@@ -1682,6 +1682,9 @@ a#mailto__dados:hover {
   .grid__bottom {
     top: 51%;
   }
+  .footer__title {
+    margin-bottom: 24px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
