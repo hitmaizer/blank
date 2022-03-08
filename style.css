@@ -1189,6 +1189,7 @@ a {
 
 .show {
   display: block;
+  position: relative;
 }
 
 .bottom__item {
@@ -1557,6 +1558,7 @@ a#mailto__dados:hover {
   background-color: #262626;
   color: white;
   padding: 64px 32px;
+  padding-bottom: 8px;
   align-items: center;
   gap: 157px;
   padding-left: 5%;
@@ -1619,21 +1621,21 @@ a#mailto__dados:hover {
 /* Media Queries */
 
 @media only screen and (max-width: 1200px) {
-  .process__grid {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-  }
   .grid__bottom {
     flex-direction: column;
-    gap: 24px;
+    position: absolute;
+    top: 62%;
+    left: 10%;
+    gap: 0;
   }
+
   .status__img {
     transform: rotateZ(90deg);
-    position: absolute;
-    top: 265px;
-    min-width: 568px;
+    transform-origin: left;
+    max-width: 510px;
+    max-height: 180px;
   }
+
   .griditem__subtitle,
   .griditem__text {
     margin-top: 4px;
