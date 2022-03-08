@@ -1661,6 +1661,7 @@ p.field__text.footer__dados {
 
 .back__btn {
   background-color: #262626;
+  padding: 32px;
 }
 
 .btn__text--back {
