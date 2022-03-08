@@ -1674,8 +1674,12 @@ p.field__text.footer__dados {
   .info__top {
     min-height: 32px;
   }
-  .barra__item {
+  .barra__item.bar1 {
     margin-right: 32px;
+  }
+
+  .barra__item.bar2 {
+    margin-right: 70px;
   }
 }
 
