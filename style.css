@@ -1638,6 +1638,10 @@ p.field__text.footer__dados {
   margin-left: 6%;
 }
 
+.info__top {
+  min-height: 230px;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 1370px) {
   .grid__bottom {
@@ -1656,6 +1660,9 @@ p.field__text.footer__dados {
   .griditem__subtitle,
   .griditem__text {
     margin-top: 4px;
+  }
+  .info__top {
+    min-height: 32px;
   }
 }
 
