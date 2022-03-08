@@ -88,8 +88,8 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                         if($counter == $index) {
                                             if($subfield) {
                                                 ?>
-                                                    <li id="all_btn">
-                                                        <a id="upload_btn" href="<?php echo esc_url( $subfield ); ?>">Carregar Ficheiros</a>
+                                                    <li id="upload_btn">
+                                                        <a id="upload_btn" target="_blank" href="<?php echo esc_url( $subfield ); ?>">Carregar Ficheiros</a>
                                                     </li>
                                                 <?php
                                             } else {
