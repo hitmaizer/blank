@@ -770,7 +770,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                 <div class="dados__block flex-col">
                     <div class="data__grid">
                         <div class="data__section projeto">
-                                <h1 class="section__title">Dados do Projeto</h1>
+                                <h1 class="section__title">Projeto</h1>
                                 <?php 
                                     if (have_rows('projeto', "user_" . $current_user->ID)) {
                                     $counter = 0;
@@ -804,7 +804,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                         </div>
     
                         <div class="data__section representante">
-                            <h1 class="section__title">Dados do Representante</h1>
+                            <h1 class="section__title">Representante</h1>
                             <?php 
                                 if (have_rows('projeto', "user_" . $current_user->ID)) {
                                 $counter = 0;
@@ -838,7 +838,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                         </div>
     
                         <div class="data__section empresa">
-                        <h1 class="section__title">Dados da Empresa</h1>
+                        <h1 class="section__title">Empresa</h1>
                         <?php 
                             if (have_rows('projeto', "user_" . $current_user->ID)) {
                                 $counter = 0;
@@ -882,7 +882,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                         
                         
                         <div class="data__section faturacao">
-                            <h1 class="section__title">Dados da Faturação</h1>
+                            <h1 class="section__title">Faturação</h1>
                             <?php 
                                 if (have_rows('projeto', "user_" . $current_user->ID)) {
                                 $counter = 0;
