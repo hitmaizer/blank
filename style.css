@@ -1633,6 +1633,11 @@ p.field__text.footer__dados {
   margin-bottom: 32px;
 }
 
+.list__item--info {
+  font-size: 13px;
+  margin-left: 6%;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 1370px) {
   .grid__bottom {
