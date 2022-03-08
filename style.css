@@ -1318,6 +1318,7 @@ a {
 }
 
 .login__header {
+  font-family: "futura-pt-bold", sans-serif;
   color: #e0c794;
   text-align: center;
   font-weight: 800;
@@ -1780,6 +1781,17 @@ a#mailto__dados:hover {
   }
   .documentos__section {
     gap: 16px;
+  }
+  p.login-username,
+  p.login-password {
+    flex-direction: column;
+    gap: 8px;
+    place-items: flex-start;
+    font-size: 16px;
+  }
+
+  .login__header {
+    font-size: 2.5rem;
   }
 }
 
