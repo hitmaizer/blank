@@ -1685,6 +1685,9 @@ a#mailto__dados:hover {
   .footer__title {
     margin-bottom: 24px;
   }
+  .footer__section {
+    min-height: 200px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
