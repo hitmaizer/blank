@@ -140,7 +140,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
             <div class="status__container container show" id="status">
                 <h1 class="container__header status__header">Processo</h1>
-                <div class="barras__grid">
+                <div class="barras__grid flex-row">
                     <div class="barra__item">
                     <?php 
                         if (have_rows('projeto', "user_" . $current_user->ID)) {
@@ -211,17 +211,17 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                 switch($subfield) {
                                     case "diagnostico_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                     <?php
                                     break;
                                     case "diagnostico_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                     <?php
                                     break;
                                     case "diagnostico_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/5.png" alt="" class="status__img">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                     <?php
                                     break;
                                     case "criacao_1": 
