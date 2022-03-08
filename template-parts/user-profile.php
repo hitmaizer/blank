@@ -111,8 +111,8 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
             <div class="status__container container show" id="status">
                 <h1 class="container__header status__header">Processo</h1>
-                <div class="process__grid">
-                    <div class="grid__topimg">
+                
+                    
                         <?php 
                         if (have_rows('projeto', "user_" . $current_user->ID)) {
                             $counter = 0;
@@ -169,7 +169,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                           }
                         
                         ?>
-                    </div>
+                    
                     <div class="grid__bottom flex-row">
                         <div class="bottom__item item--1">
                             <h3 class="griditem__title">I - Diagnóstico</h3>
@@ -198,7 +198,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                         </div>
                     </div>
 
-                </div>
+                
             </div>
 
             <div class="investimento__container container" id="investimento">
