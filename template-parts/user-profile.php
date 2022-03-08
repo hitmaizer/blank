@@ -207,6 +207,13 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                 universo para compreender objetivos e 
                                 o posicionamento que iremos trabalhar 
                                 no desenvolvimento do objeto.</p>
+                            <div class="extra__info">
+                                <ul class="info__list">
+                                    <li class="list__item--info">Briefing</li>
+                                    <li class="list__item--info">Proposta de Investimento</li>
+                                    <li class="list__item--info">Fatura 1/2</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="bottom__item item--2">
                             <h3 class="griditem__title">II - Criação</h3>
@@ -217,6 +224,14 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                 a explorar.
                                 Dá-se início ao processo criativo para 
                                 desenvolver o objeto.</p>
+                            <div class="extra__info">
+                                <ul class="info__list">
+                                    <li class="list__item--info">Proposta 1/3</li>
+                                    <li class="list__item--info">Proposta 2/3</li>
+                                    <li class="list__item--info">Proposta 3/3</li>
+                                    <li class="list__item--info">Proposta Final</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="bottom__item item--3">
                             <h3 class="griditem__title">III - Execução</h3>
@@ -224,6 +239,13 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             <p class="griditem__text">Para finalizar a receita, é apresentada a 
                                 solução, o caminho e o processo
                                 criativo desenvolvido.</p>
+                                <div class="extra__info">
+                                    <ul class="info__list">
+                                        <li class="list__item--info">Fatura 2/2</li>
+                                        <li class="list__item--info">Lançamento / Ficheiros finais</li>
+                                        <li class="list__item--info">Fim do Projeto</li>
+                                    </ul>
+                                </div>
                         </div>
                     </div>
 
