@@ -1661,12 +1661,23 @@ p.field__text.footer__dados {
 
 .back__btn {
   background-color: #262626;
-  padding: 32px;
+  padding: 20px 42px;
+  margin-top: 32px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn__text--back {
   color: white;
   font-size: 38px;
+}
+
+.back__btn:hover {
+  background-color: white;
+}
+
+.back__btn:hover h1.btn__text--back {
+  color: #262626;
 }
 
 /* Media Queries */
