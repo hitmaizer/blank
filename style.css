@@ -1647,6 +1647,22 @@ p.field__text.footer__dados {
   gap: 59px;
 }
 
+.logout__wrapper {
+  background-color: #e0c794;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog__container {
+  background-color: #262626;
+  padding: 64px;
+}
+
+.back__btn {
+  background-color: #262626;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 1446px) {
   .grid__bottom {
