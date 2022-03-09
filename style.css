@@ -1074,8 +1074,8 @@ a {
   cursor: pointer;
 }
 
-.logout__btn:hover {
-  background-color: #dfc693;
+.logout__btn:hover a {
+  color: #dfc693;
 }
 
 .page__sidebar {
@@ -1876,6 +1876,10 @@ p.field__text.footer__dados {
     color: #262626;
   }
   #upload_btn:hover {
+    color: #4d4d4d;
+  }
+
+  .sair__btn:hover a {
     color: #4d4d4d;
   }
 
