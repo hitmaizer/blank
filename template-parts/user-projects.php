@@ -12,7 +12,9 @@ $rows = get_field("projeto", "user_" . $current_user->ID);
 
 <!--  Projects HTML -----> 
 <nav class="client__nav flex-row">
-    <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-nav.png" alt="" class="nav__logo">
+    <a href="http://maionesedesign.pt" class="nav__link">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-nav.png" alt="" class="nav__logo">
+    </a>
     <button class="logout__btn--projects" >
         <a href="/wordpress/logout">Sair</a> 
     </button>
@@ -51,7 +53,9 @@ $rows = get_field("projeto", "user_" . $current_user->ID);
     
     <div class="bottom__client flex-row">
         <div class="footer__section flex-col">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-footer.png" alt="" class="footer__logo">
+            <a href="http://maionesedesign.pt" class="footer__link">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-footer.png" alt="" class="footer__logo">
+            </a>
             <p class="footer__logotext">© 2022 Maionese Design</p>
             <p class="footer__logotext">Todos os direitos reservados</p>
         </div>
