@@ -16,7 +16,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-nav.png" alt="" class="nav__logo">
         </a>
         <button class="logout__btn" >
-            <a href="/wordpress/login">Sair</a> 
+            <a href="/wordpress/logout">Sair</a> 
         </button>
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/navbar-menu-mob.png" alt="" class="navbar__webmenu">
 
@@ -131,7 +131,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             
                     </div>
                     <div class="sair__btn">
-                        <p class="list__item"> <a href="/wordpress/login">Sair</a></p>
+                        <p class="list__item"> <a href="/wordpress/logout">Sair</a></p>
                     </div>
                 </div>
             </ul>
