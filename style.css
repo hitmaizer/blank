@@ -1659,6 +1659,10 @@ p.field__text.footer__dados {
   padding: 64px;
 }
 
+.logout__header {
+  margin-bottom: 16px;
+}
+
 .back__btn {
   background-color: #262626;
   padding: 16px 86px;
