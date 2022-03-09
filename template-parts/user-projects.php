@@ -14,7 +14,7 @@ $rows = get_field("projeto", "user_" . $current_user->ID);
 <nav class="client__nav flex-row">
     <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-nav.png" alt="" class="nav__logo">
     <button class="logout__btn--projects" >
-        <a href="/wordpress/login">Sair</a> 
+        <a href="/wordpress/logout">Sair</a> 
     </button>
     
 
