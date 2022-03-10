@@ -6,7 +6,7 @@
 
 <div class="logout__wrapper flex-col">
     <div class="dialog__container flex-col">
-        <img class="login__logo" src="<?php echo get_template_directory_uri() ?>/assets/images/logo-maionese.png" alt="" class="logout__img">
+        <img class="login__logo" src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/logo-maionese.png" alt="" class="logout__img">
         <h1 class="login__header logout__header">Até breve.</h1>
     </div>
     <div class="back__btn">
