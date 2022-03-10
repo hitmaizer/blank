@@ -13,7 +13,7 @@ $rows = get_field("projeto", "user_" . $current_user->ID);
 <!--  Projects HTML -----> 
 <nav class="client__nav flex-row">
     <a href="http://maionesedesign.pt" class="nav__link">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-nav.png" alt="" class="nav__logo">
+        <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/logo-nav.png" alt="" class="nav__logo">
     </a>
     <button class="logout__btn--projects" >
         <a href="/wordpress/logout">Sair</a> 
