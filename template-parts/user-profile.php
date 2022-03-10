@@ -181,7 +181,22 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                     <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                     <?php
                                     break;
-                                    case "execucao": 
+                                    case "criacao_4": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "execucao_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "execucao_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
+                                    <?php
+                                    break;
+                                    case "execucao_3": 
                                         ?>
                                     <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                     <?php
