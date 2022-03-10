@@ -1000,16 +1000,16 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             <h3 class="footer__title">Social</h3>
             <div class="social__links flex-row">
                 <a href="https://www.instagram.com/maionesedesign.pt/" class="social__link" target="_blank">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/instagram.png" alt="" class="social__icon">
+                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/instagram.png" alt="" class="social__icon">
                 </a>
                 <a href="https://www.linkedin.com/company/maionesedesign/" class="social__link" target="_blank">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/linkedin.png" alt="" class="social__icon">
+                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/linkedin.png" alt="" class="social__icon">
                 </a>
                 <a href="https://www.behance.net/maionesedesign" class="social__link" target="_blank">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/behance.png" alt="" class="social__icon">
+                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/behance.png" alt="" class="social__icon">
                 </a>
                 <a href="https://www.youtube.com/channel/UCmZ2AHM-8yFck9zDqTQ6b7A" class="social__link" target="_blank">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/youtube.png" alt="" class="social__icon">              
+                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/youtube.png" alt="" class="social__icon">              
                 </a>
             </div>
         </div>
