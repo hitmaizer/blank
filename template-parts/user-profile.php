@@ -18,7 +18,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
         <button class="logout__btn" >
             <a href="/wordpress/logout">Sair</a> 
         </button>
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/navbar-menu-mob.png" alt="" class="navbar__webmenu">
+        <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/navbar-menu-mob.png" alt="" class="navbar__webmenu">
 
     </nav>
 
