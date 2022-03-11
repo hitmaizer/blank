@@ -1,6 +1,11 @@
 <?php
 /* Template Name: User Projects */
 
+if (!is_user_logged_in()) {
+    wp_redirect(home_url( '/login/' ));
+    exit;
+} 
+
 get_header();
 $username = wp_get_current_user()->user_firstname;
 $current_user = wp_get_current_user();
@@ -22,6 +27,9 @@ $rows = get_field("projeto", "user_" . $current_user->ID);
 
 </nav>
 
+<?php 
+
+?>
 
 <div class="projectspage__wrapper">
     <div class="content__container flex-row">
