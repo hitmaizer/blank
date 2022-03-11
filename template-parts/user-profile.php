@@ -1,6 +1,11 @@
 <?php
 /* Template Name: User Profile */
 
+if (!is_user_logged_in()) {
+    wp_redirect(home_url( '/login/' ));
+    exit;
+} 
+
 get_header();
 $username = wp_get_current_user()->user_firstname;
 $current_user = wp_get_current_user();
