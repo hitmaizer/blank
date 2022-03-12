@@ -1687,22 +1687,35 @@ p.field__text.footer__dados {
 }
 
 /* New div css*/
+.status__mobile {
+  display: none;
+  gap: 16px;
+  margin-top: 40px;
+}
+
 .block__item {
   gap: 32px;
 }
 
+.barra__img {
+  min-width: 58px;
+}
+
 .text__block {
-  max-width: 350px;
+  max-width: 230px;
 }
 
 .list__item--info-ver {
-  margin-left: 2%;
+  margin-left: 7%;
 }
 
 /* Media Queries */
 @media only screen and (max-width: 1446px) {
   .status__desktop {
     display: none;
+  }
+  .status__mobile {
+    display: flex;
   }
 }
 
@@ -1869,6 +1882,10 @@ p.field__text.footer__dados {
 
   .welcome__header.subheader {
     font-size: 0.8125rem;
+  }
+  .status__mobile {
+    margin-left: 10%;
+    margin-bottom: 10%;
   }
 }
 
