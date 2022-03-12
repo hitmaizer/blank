@@ -1,5 +1,5 @@
 <?php
-/* Template Name: User Profile */
+/* Template Name: Status Fixed */
 
 if (!is_user_logged_in()) {
     wp_redirect(home_url( '/login/' ));
@@ -145,6 +145,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
             <div class="status__container container show" id="status">
                 <h1 class="container__header status__header">Processo</h1>
+
                 <div class="status__desktop">
                     <div class="barras__grid flex-row">
                         <div class="barra__item bar1">
