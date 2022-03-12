@@ -1688,6 +1688,9 @@ p.field__text.footer__dados {
 
 /* Media Queries */
 @media only screen and (max-width: 1446px) {
+  .status__desktop {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
