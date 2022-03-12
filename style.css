@@ -1022,7 +1022,6 @@ a {
 .page__wrapper {
   padding: 64px;
   background-color: #dfc693;
-  min-height: 160vh;
 }
 
 .flex-col {
