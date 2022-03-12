@@ -145,227 +145,227 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
             <div class="status__container container show" id="status">
                 <h1 class="container__header status__header">Processo</h1>
-                <div class="barras__grid flex-row">
-                    <div class="barra__item bar1">
-                    <?php 
-                        if (have_rows('projeto', "user_" . $current_user->ID)) {
-                            $counter = 0;
-                            while (have_rows('projeto', "user_" . $current_user->ID)) {
-                              the_row();
-                              $counter++;
-                              $subfield = get_sub_field('status');
-                              if ($counter == $index) {
-                                switch($subfield) {
-                                    case "diagnostico_1": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/2.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "diagnostico_2": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/3.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "diagnostico_3": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_1": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_2": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_3": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_4": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "execucao_1": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "execucao_2": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "execucao_3": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    break;
-                                    default : 
-                                        ?>
-                                    <h1>O seu projecto ainda vai ser iniciado.</h1>
-                                    <?php
-                                    break;
+                <div class="status__desktop">
+                    <div class="barras__grid flex-row">
+                        <div class="barra__item bar1">
+                        <?php 
+                            if (have_rows('projeto', "user_" . $current_user->ID)) {
+                                $counter = 0;
+                                while (have_rows('projeto', "user_" . $current_user->ID)) {
+                                    the_row();
+                                    $counter++;
+                                    $subfield = get_sub_field('status');
+                                    if ($counter == $index) {
+                                        switch($subfield) {
+                                            case "diagnostico_1": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/2.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "diagnostico_2": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/3.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "diagnostico_3": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_1": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_2": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_3": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_4": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "execucao_1": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "execucao_2": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "execucao_3": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            break;
+                                            default : 
+                                                ?>
+                                            <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                            <?php
+                                            break;
+                                        }
+                                    }
                                 }
-                              }
                             }
-                          }
                         
                         ?>
-                    </div>
-                    <div class="barra__item bar2">
-                    <?php 
-                        if (have_rows('projeto', "user_" . $current_user->ID)) {
-                            $counter = 0;
-                            while (have_rows('projeto', "user_" . $current_user->ID)) {
-                              the_row();
-                              $counter++;
-                              $subfield = get_sub_field('status');
-                              if ($counter == $index) {
-                                switch($subfield) {
-                                    case "diagnostico_1": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/7.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "diagnostico_2": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/7.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "diagnostico_3": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/7.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_1": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/8.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_2": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/9.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_3": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/10.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_4": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "execucao_1": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "execucao_2": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "execucao_3": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    break;
-                                    default : 
-                                        ?>
-                                    <h1>O seu projecto ainda vai ser iniciado.</h1>
-                                    <?php
-                                    break;
+                        </div>
+                        <div class="barra__item bar2">
+                            <?php 
+                            if (have_rows('projeto', "user_" . $current_user->ID)) {
+                                $counter = 0;
+                                while (have_rows('projeto', "user_" . $current_user->ID)) {
+                                    the_row();
+                                    $counter++;
+                                    $subfield = get_sub_field('status');
+                                    if ($counter == $index) {
+                                        switch($subfield) {
+                                            case "diagnostico_1": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/7.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "diagnostico_2": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/7.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "diagnostico_3": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/7.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_1": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/8.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_2": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/9.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_3": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/10.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_4": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "execucao_1": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "execucao_2": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "execucao_3": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            break;
+                                            default : 
+                                                ?>
+                                            <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                            <?php
+                                            break;
+                                        }
+                                    }
                                 }
-                              }
                             }
-                          }
                         
                         ?>
-                    </div>
-                    <div class="barra__item bar3">
-                    <?php 
-                        if (have_rows('projeto', "user_" . $current_user->ID)) {
-                            $counter = 0;
-                            while (have_rows('projeto', "user_" . $current_user->ID)) {
-                              the_row();
-                              $counter++;
-                              $subfield = get_sub_field('status');
-                              if ($counter == $index) {
-                                switch($subfield) {
-                                    case "diagnostico_1": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "diagnostico_2": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "diagnostico_3": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_1": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_2": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_3": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "criacao_4": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "execucao_1": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/2.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "execucao_2": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/3.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    case "execucao_3": 
-                                        ?>
-                                    <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
-                                    <?php
-                                    break;
-                                    break;
-                                    default : 
-                                        ?>
-                                    <h1>O seu projecto ainda vai ser iniciado.</h1>
-                                    <?php
-                                    break;
+                        </div>
+                        <div class="barra__item bar3">
+                            <?php 
+                            if (have_rows('projeto', "user_" . $current_user->ID)) {
+                                $counter = 0;
+                                while (have_rows('projeto', "user_" . $current_user->ID)) {
+                                    the_row();
+                                    $counter++;
+                                    $subfield = get_sub_field('status');
+                                    if ($counter == $index) {
+                                        switch($subfield) {
+                                            case "diagnostico_1": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "diagnostico_2": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "diagnostico_3": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_1": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_2": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_3": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_4": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "execucao_1": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/2.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "execucao_2": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/3.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "execucao_3": 
+                                                ?>
+                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            break;
+                                            default : 
+                                                ?>
+                                            <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                            <?php
+                                            break;
+                                        }
+                                    }
                                 }
-                              }
                             }
-                          }
                         
                         ?>
-                    </div>
-
+                        </div>
                 </div>
                 
                     
@@ -429,6 +429,9 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
 
                 
             </div>
+
+                </div>
+                
 
             <div class="investimento__container container" id="investimento">
                 <h1 class="container__header">Investimento</h1>
