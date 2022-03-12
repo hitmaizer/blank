@@ -433,7 +433,79 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
         <div class="status__mobile flex-col">
             
             <div class="block__item bloco1 flex-row">
-                <div class="barra__img barra1--ver"></div>
+                <div class="barra__img barra1--ver">
+                <?php 
+                    if (have_rows('projeto', "user_" . $current_user->ID)) {
+                        $counter = 0;
+                        while (have_rows('projeto', "user_" . $current_user->ID)) {
+                            the_row();
+                            $counter++;
+                            $subfield = get_sub_field('status');
+                            if ($counter == $index) {
+                                switch($subfield) {
+                                    case "diagnostico_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "diagnostico_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "diagnostico_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_4": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "execucao_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "execucao_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "execucao_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    break;
+                                    default : 
+                                        ?>
+                                    <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                    <?php
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                        
+                ?>
+                </div>
                 <div class="text__block">
                     <div class="info__top">
                         <h3 class="griditem__title">I - Diagnóstico</h3>
