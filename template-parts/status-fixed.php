@@ -445,52 +445,52 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                 switch($subfield) {
                                     case "diagnostico_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/2-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "diagnostico_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/3-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "diagnostico_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "criacao_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "criacao_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "criacao_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "criacao_4": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "execucao_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "execucao_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "execucao_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     break;
@@ -507,7 +507,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                 ?>
                 </div>
                 <div class="text__block">
-                    <div class="info__top">
+                    <div class="info__top--ver">
                         <h3 class="griditem__title">I - Diagnóstico</h3>
                         <h6 class="griditem__subtitle">A escolha dos condimentos!</h6>
                         <p class="griditem__text">Nesta fase mergulhamos no seu 
@@ -517,9 +517,9 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                     </div>
                     <div class="extra__info">
                         <ul class="info__list">
-                            <li class="list__item--info">Briefing</li>
-                            <li class="list__item--info">Proposta de Investimento</li>
-                            <li class="list__item--info">Fatura 1/2</li>
+                            <li class="list__item--info-ver">Briefing</li>
+                            <li class="list__item--info-ver">Proposta de Investimento</li>
+                            <li class="list__item--info-ver">Fatura 1/2</li>
                         </ul>
                     </div>
                 </div>
@@ -528,7 +528,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             <div class="block__item bloco2 flex-row">
                 <div class="barra__img barra1--ver"></div>
                 <div class="text__block">
-                    <div class="info__top">
+                    <div class="info__top--ver">
                         <h3 class="griditem__title">II - Criação</h3>
                         <h6 class="griditem__subtitle">É o momento da emulsão!</h6>
                         <p class="griditem__text">Vamos definir e estruturar o mais 
@@ -551,7 +551,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             <div class="block__item bloco3 flex-row">
                 <div class="barra__img barra1--ver"></div>
                 <div class="text__block">
-                    <div class="info__top">
+                    <div class="info__top--ver">
                         <h3 class="griditem__title">III - Execução</h3>
                         <h6 class="griditem__subtitle">Condimentamos o seu projeto!</h6>
                         <p class="griditem__text">Para finalizar a receita, é apresentada a 
