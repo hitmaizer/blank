@@ -1686,6 +1686,11 @@ p.field__text.footer__dados {
   color: #262626;
 }
 
+/* New div css*/
+.block__item {
+  gap: 32px;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 1446px) {
   .status__desktop {
