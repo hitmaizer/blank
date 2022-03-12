@@ -526,7 +526,79 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             </div>
             
             <div class="block__item bloco2 flex-row">
-                <div class="barra__img barra1--ver"></div>
+                <div class="barra__img barra2--ver">
+                <?php 
+                    if (have_rows('projeto', "user_" . $current_user->ID)) {
+                        $counter = 0;
+                        while (have_rows('projeto', "user_" . $current_user->ID)) {
+                            the_row();
+                            $counter++;
+                            $subfield = get_sub_field('status');
+                            if ($counter == $index) {
+                                switch($subfield) {
+                                    case "diagnostico_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/7-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "diagnostico_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/7-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "diagnostico_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/7-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/8-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/9-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/10-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_4": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/11-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "execucao_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/11-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "execucao_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/11-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "execucao_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/11-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    break;
+                                    default : 
+                                        ?>
+                                    <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                    <?php
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                        
+                ?>
+                </div>
                 <div class="text__block">
                     <div class="info__top--ver">
                         <h3 class="griditem__title">II - Criação</h3>
@@ -549,7 +621,79 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                 </div>
             </div>
             <div class="block__item bloco3 flex-row">
-                <div class="barra__img barra1--ver"></div>
+                <div class="barra__img barra3--ver">
+                <?php 
+                    if (have_rows('projeto', "user_" . $current_user->ID)) {
+                        $counter = 0;
+                        while (have_rows('projeto', "user_" . $current_user->ID)) {
+                            the_row();
+                            $counter++;
+                            $subfield = get_sub_field('status');
+                            if ($counter == $index) {
+                                switch($subfield) {
+                                    case "diagnostico_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "diagnostico_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "diagnostico_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_4": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/1-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "execucao_1": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/2-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "execucao_2": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/3-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "execucao_3": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    break;
+                                    default : 
+                                        ?>
+                                    <h1>O seu projecto ainda vai ser iniciado.</h1>
+                                    <?php
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                        
+                ?>
+                </div>
                 <div class="text__block">
                     <div class="info__top--ver">
                         <h3 class="griditem__title">III - Execução</h3>
