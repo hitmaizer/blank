@@ -369,9 +369,6 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                         </div>
                 </div>
                 
-                    
-                        
-                    
                     <div class="grid__bottom flex-row">
                         <div class="bottom__item item--1">
                             <div class="info__top">
@@ -418,20 +415,88 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                     solução, o caminho e o processo
                                     criativo desenvolvido.</p>
                             </div>
-                                <div class="extra__info">
-                                    <ul class="info__list">
-                                        <li class="list__item--info">Fatura 2/2</li>
-                                        <li class="list__item--info">Lançamento / Ficheiros finais</li>
-                                        <li class="list__item--info">Fim do Projeto</li>
-                                    </ul>
-                                </div>
+                            <div class="extra__info">
+                                <ul class="info__list">
+                                    <li class="list__item--info">Fatura 2/2</li>
+                                    <li class="list__item--info">Lançamento / Ficheiros finais</li>
+                                    <li class="list__item--info">Fim do Projeto</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
                 
             </div>
 
+        </div>
+
+        <div class="status__mobile flex-col">
+            
+            <div class="block__item bloco1 flex-row">
+                <div class="barra__img barra1--ver"></div>
+                <div class="text__block">
+                    <div class="info__top">
+                        <h3 class="griditem__title">I - Diagnóstico</h3>
+                        <h6 class="griditem__subtitle">A escolha dos condimentos!</h6>
+                        <p class="griditem__text">Nesta fase mergulhamos no seu 
+                            universo para compreender objetivos e 
+                            o posicionamento que iremos trabalhar 
+                            no desenvolvimento do objeto.</p>
+                    </div>
+                    <div class="extra__info">
+                        <ul class="info__list">
+                            <li class="list__item--info">Briefing</li>
+                            <li class="list__item--info">Proposta de Investimento</li>
+                            <li class="list__item--info">Fatura 1/2</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="block__item bloco2 flex-row">
+                <div class="barra__img barra1--ver"></div>
+                <div class="text__block">
+                    <div class="info__top">
+                        <h3 class="griditem__title">II - Criação</h3>
+                        <h6 class="griditem__subtitle">É o momento da emulsão!</h6>
+                        <p class="griditem__text">Vamos definir e estruturar o mais 
+                            importante. São apresentadas as
+                            referências recolhidas e qual o caminho 
+                            a explorar.
+                            Dá-se início ao processo criativo para 
+                            desenvolver o objeto.</p>
+                    </div>
+                    <div class="extra__info">
+                        <ul class="info__list">
+                            <li class="list__item--info">Proposta 1/3</li>
+                            <li class="list__item--info">Proposta 2/3</li>
+                            <li class="list__item--info">Proposta 3/3</li>
+                            <li class="list__item--info">Proposta Final</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="block__item bloco3 flex-row">
+                <div class="barra__img barra1--ver"></div>
+                <div class="text__block">
+                    <div class="info__top">
+                        <h3 class="griditem__title">III - Execução</h3>
+                        <h6 class="griditem__subtitle">Condimentamos o seu projeto!</h6>
+                        <p class="griditem__text">Para finalizar a receita, é apresentada a 
+                            solução, o caminho e o processo
+                            criativo desenvolvido.</p>
+                    </div>
+                    <div class="extra__info">
+                        <ul class="info__list">
+                            <li class="list__item--info">Fatura 2/2</li>
+                            <li class="list__item--info">Lançamento / Ficheiros finais</li>
+                            <li class="list__item--info">Fim do Projeto</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+        </div>
                 
 
             <div class="investimento__container container" id="investimento">
