@@ -29,6 +29,16 @@
         wp_register('', ''); // Display "Site Admin" link.
     }
     ?>
+    <?php 
+    if(isset($_GET['login'])){
+
+        if($_GET['login'] == 'failed') {
+            ?>
+                <h1>Deu merda!</h1>
+            <?php
+        }
+    }
+        ?>
 </div>
 
 
