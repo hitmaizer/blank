@@ -1,6 +1,8 @@
 <?php
     /* Template Name: Logout Page */
     get_header();
+    
+    
 
 ?>
 
@@ -17,3 +19,4 @@
 </div>
 <?php 
 get_footer();
+
