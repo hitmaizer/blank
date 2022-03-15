@@ -195,7 +195,7 @@ function redirect_after_logout(){
 }
 
 //loginerror
-add_action( 'wp_login_failed', 'my_front_end_login_fail' );  // hook failed login
+/* add_action( 'wp_login_failed', 'my_front_end_login_fail' );  // hook failed login
 
 function my_front_end_login_fail( $username ) {
    $referrer = $_SERVER['HTTP_REFERER'];  // where did the post submission come from?
@@ -213,3 +213,32 @@ function my_front_end_login_fail( $username ) {
       exit;
    }
 }
+*/
+
+
+//login error fixed
+
+function wpcc_front_end_login_fail( $username ) {
+	$referrer = $_SERVER['HTTP_REFERER']; 
+	if ( !empty( $referrer ) && !strstr( $referrer,'wp-login' ) && !strstr( $referrer,'wp-admin' ) ) {
+	  $referrer = esc_url( remove_query_arg( 'login', $referrer ) );
+	  wp_redirect( $referrer . '?login=failed' );
+	  exit;
+	}
+  }
+add_action( 'wp_login_failed', 'wpcc_front_end_login_fail' );
+
+function custom_authenticate_wpcc( $user, $username, $password ) {
+	if ( is_wp_error( $user ) && isset( $_SERVER[ 'HTTP_REFERER' ] ) && !strpos( $_SERVER[ 'HTTP_REFERER' ], 'wp-admin' ) && !strpos( $_SERVER[ 'HTTP_REFERER' ], 'wp-login.php' ) ) {
+	  $referrer = $_SERVER[ 'HTTP_REFERER' ];
+	  foreach ( $user->errors as $key => $error ) {
+		  if ( in_array( $key, array( 'empty_password', 'empty_username') ) ) {
+			unset( $user->errors[ $key ] );
+			$user->errors[ 'custom_'.$key ] = $error;
+		  }
+		}
+	}
+ 
+  return $user;
+}
+add_filter( 'authenticate', 'custom_authenticate_wpcc', 31, 3);
