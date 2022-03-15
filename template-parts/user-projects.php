@@ -21,7 +21,7 @@ $rows = get_field("projeto", "user_" . $current_user->ID);
         <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/logo-nav.png" alt="" class="nav__logo">
     </a>
     <button class="logout__btn--projects" >
-        <a href="/wordpress/logout">Sair</a> 
+        <a href="<?php echo wp_logout_url(); ?>">Sair</a> 
     </button>
     
 
