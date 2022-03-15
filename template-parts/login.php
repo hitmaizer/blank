@@ -6,6 +6,8 @@
         wp_redirect(home_url( '/user-projects/' ));
         exit;
     } 
+
+    get_header();
 ?>
 
 <div class="loginpage__wrapper">
