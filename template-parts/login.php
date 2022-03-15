@@ -34,7 +34,10 @@
 
         if($_GET['login'] == 'failed') {
             ?>
-                <h1>Deu merda!</h1>
+                <div class="error__container flex-row">
+                    <p class="error__message">Utilizador ou palavra-chave erradas. Por favor, tente novamente.</p>
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/error-icon.png0" alt="" class="error__icon">
+                </div>
             <?php
         }
     }
