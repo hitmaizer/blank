@@ -21,7 +21,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
             <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/logo-nav.png" alt="" class="nav__logo">
         </a>
         <button class="logout__btn" >
-            <a href="/wordpress/logout">Sair</a> 
+            <a href="<?php echo wp_logout_url(); ?>">Sair</a> 
         </button>
         <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/navbar-menu-mob.png" alt="" class="navbar__webmenu">
 
@@ -136,7 +136,7 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                             
                     </div>
                     <div class="sair__btn">
-                        <p class="list__item"> <a href="/wordpress/logout">Sair</a></p>
+                        <p class="list__item"> <a href="<?php echo wp_logout_url(); ?>">Sair</a></p>
                     </div>
                 </div>
             </ul>
