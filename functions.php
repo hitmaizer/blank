@@ -190,7 +190,7 @@ function remove_admin_bar() {
 // logout
 add_action( 'wp_logout', 'redirect_after_logout');
 function redirect_after_logout(){
-  wp_redirect( home_url('/logout/') );
+  wp_redirect( home_url('/login/') );
   exit();
 }
 
