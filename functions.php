@@ -199,9 +199,17 @@ add_action( 'wp_login_failed', 'my_front_end_login_fail' );  // hook failed logi
 
 function my_front_end_login_fail( $username ) {
    $referrer = $_SERVER['HTTP_REFERER'];  // where did the post submission come from?
+   global $wp;
+   $current_url = home_url(add_query_arg(array($_GET), $wp->request));
+   
+   
    // if there's a valid referrer, and it's not the default log-in screen
    if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
-      wp_redirect( $referrer . '?login=failed' );  // let's append some information (login=failed) to the URL for the theme to use
+	if (isset($_GET['login'])) {
+		header("Refresh:0");
+	   } else {
+		   wp_redirect( $referrer . '?login=failed' );  // let's append some information (login=failed) to the URL for the theme to use
+	   }
       exit;
    }
 }
