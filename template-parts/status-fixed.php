@@ -238,52 +238,57 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                         switch($subfield) {
                                             case "diagnostico_1": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/7.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/7.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "diagnostico_2": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/7.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/7.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "diagnostico_3": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/7.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/7.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_1": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/8.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/8.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_2": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/9.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/9.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_3": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/10.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/10.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_4": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/11.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_5": 
+                                                ?>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/12.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "execucao_1": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/12.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "execucao_2": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/12.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "execucao_3": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/11.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/12.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             break;
@@ -311,52 +316,57 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                         switch($subfield) {
                                             case "diagnostico_1": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "diagnostico_2": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "diagnostico_3": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_1": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_2": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_3": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_4": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/1.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_5": 
+                                                ?>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/1.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "execucao_1": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/2.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/2.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "execucao_2": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/3.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/3.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "execucao_3": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             break;
@@ -479,6 +489,11 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                     <?php
                                     break;
                                     case "criacao_4": 
+                                        ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
+                                    <?php
+                                    break;
+                                    case "criacao_5": 
                                         ?>
                                     <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
