@@ -160,52 +160,57 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                         switch($subfield) {
                                             case "diagnostico_1": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/2.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/2.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "diagnostico_2": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/3.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/3.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "diagnostico_3": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_1": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_2": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_3": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "criacao_4": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
+                                            <?php
+                                            break;
+                                            case "criacao_5": 
+                                                ?>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "execucao_1": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "execucao_2": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             case "execucao_3": 
                                                 ?>
-                                            <img src="https://www.maionesedesign.pt/wp-content/uploads/2022/03/4.png" alt="" class="status__img">
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__img">
                                             <?php
                                             break;
                                             break;
@@ -445,52 +450,52 @@ $index = (isset($_GET['id'])) ? $_GET['id'] : "0";
                                 switch($subfield) {
                                     case "diagnostico_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/2.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/2-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "diagnostico_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/3.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/3-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "diagnostico_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "criacao_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "criacao_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "criacao_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "criacao_4": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "execucao_1": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "execucao_2": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     case "execucao_3": 
                                         ?>
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4.png" alt="" class="status__imgver">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/4-ver.png" alt="" class="status__imgver">
                                     <?php
                                     break;
                                     break;
